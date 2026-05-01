@@ -1,0 +1,81 @@
+window.COLLAB_DATA = {
+  "kpis": [
+    {
+      "label": "页面总数",
+      "value": "6"
+    },
+    {
+      "label": "案例总量",
+      "value": "12"
+    },
+    {
+      "label": "评审轮次",
+      "value": "2"
+    },
+    {
+      "label": "视频时长",
+      "value": "30s"
+    }
+  ],
+  "steps": [
+    {
+      "phase": "需求收敛",
+      "owner": "Codex 主导",
+      "input": "用户目标、展示场景、交付顺序约束",
+      "output": "双计划顺序执行方案与验收口径",
+      "qualityGate": "目标明确、里程碑可执行、无关键歧义",
+      "evidence": "计划文档与阶段检查项"
+    },
+    {
+      "phase": "主实现",
+      "owner": "Claude Code 主导",
+      "input": "页面清单、内容结构、视觉方向",
+      "output": "网站页面、数据文件、动效与降级策略",
+      "qualityGate": "全页可访问、数据可渲染、移动端可用",
+      "evidence": "静态站点源码与本地启动脚本"
+    },
+    {
+      "phase": "质量门禁",
+      "owner": "Codex 把关",
+      "input": "实现产物与运行结果",
+      "output": "需求符合性审查 + 代码质量审查",
+      "qualityGate": "无阻断缺陷，演示流程可连续完成",
+      "evidence": "验收清单与修复记录"
+    },
+    {
+      "phase": "发布素材",
+      "owner": "Claude Code 产出，Codex 复核",
+      "input": "网站成品与展示重点",
+      "output": "30 秒视频分镜、字幕、剪辑指南、发布文案",
+      "qualityGate": "时码准确、可读性达标、导出参数可用",
+      "evidence": "video 目录素材包"
+    }
+  ],
+  "milestones": [
+    {
+      "name": "M1 视觉骨架完成",
+      "date": "Day 1",
+      "status": "首页与全局视觉系统完成，导航与动效可运行",
+      "artifactLink": "index.html / styles.css / script.js"
+    },
+    {
+      "name": "M2 网站展示可用",
+      "date": "Day 1",
+      "status": "12 个案例、作品列表、详情与协同专页全部连通",
+      "artifactLink": "works.html / work.html / data/works.json"
+    },
+    {
+      "name": "M3 网站冻结 v1",
+      "date": "Day 1",
+      "status": "本地一键演示流程通过，进入视频素材制作阶段",
+      "artifactLink": "start-demo.ps1 / README.md / DEMO_SCRIPT.md"
+    },
+    {
+      "name": "M4 视频素材包完成",
+      "date": "Day 1",
+      "status": "30 秒分镜、字幕、BGM 卡点与发布文案齐备",
+      "artifactLink": "video/storyboard.md / video/captions.srt"
+    }
+  ]
+}
+;

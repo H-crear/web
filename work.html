@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品详情 · Shanhe Atelier</title>
+    <meta name="description" content="项目详情页，展示作品完整叙事、细节图与上下篇导航。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="topbar">
+        <div class="container topbar-inner">
+          <a class="brand" href="index.html">
+            <span class="brand-mark parallax"></span>
+            <span>Shanhe Atelier</span>
+          </a>
+          <button class="menu-toggle" aria-label="展开菜单" aria-expanded="false">☰</button>
+          <nav class="nav">
+            <a href="index.html">首页</a>
+            <a href="works.html">作品</a>
+            <a href="collaboration.html">协同</a>
+            <a href="about.html">关于</a>
+            <a href="contact.html">联系</a>
+          </nav>
+        </div>
+      </header>
+
+      <main id="work-detail"></main>
+
+      <footer class="footer">
+        <div class="container footer-inner">
+          <p>© <span class="current-year"></span> Shanhe Atelier</p>
+          <p>Work Detail Template</p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./data/works-data.js"></script>
+    <script src="./data-loader.js"></script>
+    <script src="./script.js"></script>
+    <script src="./work.js"></script>
+  </body>
+</html>

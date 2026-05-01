@@ -1,0 +1,12 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='900' viewBox='0 0 1200 900'>
+  <defs>
+    <linearGradient id='d3' x1='0' y1='1' x2='1' y2='0'>
+      <stop offset='0%' stop-color='#181818'/>
+      <stop offset='100%' stop-color='#3f4f7a'/>
+    </linearGradient>
+  </defs>
+  <rect width='1200' height='900' fill='url(#d3)'/>
+  <rect x='80' y='80' width='1040' height='740' rx='28' fill='none' stroke='#c7d7f4' stroke-opacity='0.62' stroke-width='3'/>
+  <text x='120' y='180' fill='#fff4e6' font-size='58' font-family='Arial, sans-serif' font-weight='700'>WORK 04 · DETAIL 3</text>
+  <text x='120' y='245' fill='#ffe8d2' font-size='30' font-family='Arial, sans-serif'>Codex x Claude Collaboration Demo Asset</text>
+</svg>

@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shanhe Atelier · 个人创作作品集</title>
+    <meta name="description" content="个人创作作品集官网，展示图文、平面与摄影案例，同时呈现 Codex 与 Claude Code 的协同创作能力。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="topbar">
+        <div class="container topbar-inner">
+          <a class="brand" href="index.html">
+            <span class="brand-mark parallax"></span>
+            <span>Shanhe Atelier</span>
+          </a>
+          <button class="menu-toggle" aria-label="展开菜单" aria-expanded="false">☰</button>
+          <nav class="nav">
+            <a href="index.html">首页</a>
+            <a href="works.html">作品</a>
+            <a href="collaboration.html">协同</a>
+            <a href="about.html">关于</a>
+            <a href="contact.html">联系</a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="container hero-grid">
+            <div>
+              <span class="eyebrow reveal">Creative Portfolio · 30s Story-driven Showcase</span>
+              <h1 class="reveal">把创作做成一套可展示、可复用、可协同的流程</h1>
+              <p class="reveal">
+                这里展示我的图文、平面与摄影作品，也完整公开从需求到交付的协同方法。网站由
+                Codex 与 Claude Code 协同完成，重点不是“做了什么”，而是“如何稳定做成”。
+              </p>
+              <div class="hero-cta reveal">
+                <a class="btn btn-primary" href="works.html">查看全部作品</a>
+                <a class="btn" href="collaboration.html">查看协同流程</a>
+              </div>
+            </div>
+
+            <aside class="hero-panel floaty reveal">
+              <h3>本次展示重点</h3>
+              <p class="muted">以真实项目节奏演示「策略拆解 -> 实作 -> 评审 -> 成片发布」的完整链路。</p>
+              <div class="stats">
+                <div class="stat">
+                  <strong>12</strong>
+                  <span class="muted">完整案例</span>
+                </div>
+                <div class="stat">
+                  <strong>6</strong>
+                  <span class="muted">站点页面</span>
+                </div>
+                <div class="stat">
+                  <strong>30s</strong>
+                  <span class="muted">短视频成片脚本</span>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container">
+            <div class="section-title reveal">
+              <h2>精选作品</h2>
+              <p>以下为当前展示集中最具代表性的 6 个项目，你可以进入详情页查看完整叙事和视觉拆解。</p>
+            </div>
+            <div id="featured-works" class="work-grid"></div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container">
+            <div class="section-title reveal">
+              <h2>能力框架</h2>
+              <p>内容创作与技术执行并重，让“设计美感”和“交付效率”同时成立。</p>
+            </div>
+            <div class="grid-3 stagger">
+              <article class="card reveal">
+                <h3>视觉叙事</h3>
+                <p>以封面、版式、留白和色调构建记忆点，让每个项目都有独立气质而非模板化输出。</p>
+              </article>
+              <article class="card reveal">
+                <h3>协同生产</h3>
+                <p>把复杂任务拆成可验证子任务，利用 AI 协同缩短从想法到成品的时间。</p>
+              </article>
+              <article class="card reveal">
+                <h3>发布导向</h3>
+                <p>项目结果直接可转化为社媒素材，支持内容传播、作品展示和商务对接。</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container">
+            <div class="section-title reveal">
+              <h2>完整展示链路</h2>
+            </div>
+            <div class="grid-2">
+              <article class="card reveal">
+                <h3>Phase 1：网站成品</h3>
+                <p>多页作品集、12 案例数据驱动、动效与降级策略、可一键本地演示。</p>
+                <p style="margin-top:0.8rem;"><a class="btn" href="works.html">进入作品页</a></p>
+              </article>
+              <article class="card reveal">
+                <h3>Phase 2：抖音素材包</h3>
+                <p>30 秒分镜、字幕 SRT、BGM 卡点与剪辑导出规范，支持快速发布。</p>
+                <p style="margin-top:0.8rem;"><a class="btn" href="collaboration.html">查看协同页</a></p>
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container footer-inner">
+          <p>© <span class="current-year"></span> Shanhe Atelier</p>
+          <p>Built by Codex × Claude Code · Demo Ready</p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./data/works-data.js"></script>
+    <script src="./data-loader.js"></script>
+    <script src="./script.js"></script>
+    <script src="./home.js"></script>
+  </body>
+</html>

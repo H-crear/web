@@ -1,0 +1,24 @@
+{
+  "project": "Codex x Claude Collaboration Showcase",
+  "version": "v1",
+  "format": {
+    "resolution": "1080x1920",
+    "fps": 30,
+    "durationSeconds": 30,
+    "videoCodec": "H.264",
+    "audioCodec": "AAC",
+    "audioSampleRate": 48000
+  },
+  "style": {
+    "narrative": "story-driven",
+    "audioMode": "subtitle + bgm",
+    "cta": "none"
+  },
+  "deliverables": [
+    "storyboard.md",
+    "captions.srt",
+    "bgm-plan.md",
+    "edit-guide.md",
+    "publish-copy.md"
+  ]
+}
