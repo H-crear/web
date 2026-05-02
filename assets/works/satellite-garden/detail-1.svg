@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">卫星花园</title>
+  <desc id="desc">轨道卫星上漂浮着温室花园和圆形天线结构。</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1420"/>
+      <stop offset="0.56" stop-color="#20352c"/>
+      <stop offset="1" stop-color="#cdd8e2"/>
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#f2b65c" stroke-opacity=".12" stroke-width="1"/>
+    </pattern>
+    <filter id="soft">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="760" fill="url(#sky)"/>
+  <rect width="1200" height="760" fill="url(#grid)" opacity=".65"/>
+  <circle cx="313" cy="148" r="131" fill="#94c76e" opacity=".16" filter="url(#soft)"/>
+  <circle cx="842" cy="198" r="126" fill="#f2b65c" opacity=".14" filter="url(#soft)"/>
+  <path d="M0 222 C 160 142, 250 342, 420 232 S 720 152, 900 242 S 1090 342, 1200 262 V760 H0Z" fill="#20352c" opacity=".72"/>
+  <path d="M0 397 C 130 317, 280 432, 430 342 S 720 292, 860 372 S 1070 472, 1200 382 V760 H0Z" fill="#0d1420" opacity=".78"/>
+  <g fill="none" stroke="#f2b65c" stroke-width="3" stroke-linecap="round" opacity=".82">
+    <path d="M170 482 C280 327, 370 578, 510 430 S720 383, 840 430 S990 592, 1080 469"/>
+    <path d="M120 378 L320 356 L520 332 L710 278 L960 310"/>
+    <path d="M230 592 L410 530 L600 608 L790 510 L1010 518"/>
+  </g>
+  <g fill="#94c76e" stroke="#f2b65c" stroke-opacity=".8" stroke-width="2">
+    <circle cx="170" cy="482" r="10"/>
+    <circle cx="320" cy="356" r="8"/>
+    <circle cx="510" cy="430" r="12"/>
+    <circle cx="710" cy="278" r="9"/>
+    <circle cx="840" cy="430" r="11"/>
+    <circle cx="1010" cy="518" r="8"/>
+  </g>
+  <g opacity=".9">
+    <rect x="76" y="74" width="320" height="88" rx="6" fill="#0d1420" fill-opacity=".72" stroke="#f2b65c" stroke-opacity=".22"/>
+    <text x="100" y="116" fill="#f2b65c" font-family="Arial, sans-serif" font-size="22" letter-spacing="2">卫星花园</text>
+    <text x="100" y="146" fill="#94c76e" font-family="Arial, sans-serif" font-size="18">作品档案馆</text>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="14" fill="#f2b65c" opacity=".78">
+    <text x="940" y="650">ARCHIVE 07</text>
+    <text x="940" y="678">2024 / 作品档案馆</text>
+  </g>
+</svg>

@@ -1,80 +1,78 @@
 {
   "kpis": [
     {
-      "label": "页面总数",
+      "label": "作品项目",
+      "value": "8"
+    },
+    {
+      "label": "资产形式",
+      "value": "SVG"
+    },
+    {
+      "label": "交付页面",
       "value": "6"
     },
     {
-      "label": "案例总量",
-      "value": "12"
+      "label": "流程阶段",
+      "value": "4"
+    }
+  ],
+  "principles": [
+    {
+      "title": "先搭世界观，再生成图像",
+      "text": "每个项目先明确地点、时间、物件、叙事规则和视觉禁区，再进入提示词实验。"
     },
     {
-      "label": "评审轮次",
-      "value": "2"
+      "title": "把提示词当作设计系统",
+      "text": "关键词不是一次性咒语，而是可复用的材质、镜头、版式和情绪约束。"
     },
     {
-      "label": "视频时长",
-      "value": "30s"
+      "title": "让迭代痕迹可展示",
+      "text": "作品详情保留背景、生成思路、迭代过程和结果说明，便于客户理解判断路径。"
     }
   ],
   "steps": [
     {
-      "phase": "需求收敛",
-      "owner": "Codex 主导",
-      "input": "用户目标、展示场景、交付顺序约束",
-      "output": "双计划顺序执行方案与验收口径",
-      "qualityGate": "目标明确、里程碑可执行、无关键歧义",
-      "evidence": "计划文档与阶段检查项"
+      "phase": "01 / Brief",
+      "title": "概念收束",
+      "input": "主题、使用场景、受众、禁区和交付格式",
+      "output": "世界观短设定、关键词矩阵、参考方向",
+      "qualityGate": "标题、类别、摘要和视觉主语明确"
     },
     {
-      "phase": "主实现",
-      "owner": "Claude Code 主导",
-      "input": "页面清单、内容结构、视觉方向",
-      "output": "网站页面、数据文件、动效与降级策略",
-      "qualityGate": "全页可访问、数据可渲染、移动端可用",
-      "evidence": "静态站点源码与本地启动脚本"
+      "phase": "02 / Prompt",
+      "title": "提示词搭建",
+      "input": "世界观设定、材质词、镜头词、版式词",
+      "output": "3-5 组可比较的生成方向",
+      "qualityGate": "不同方向能被清楚比较，而不是随机抽卡"
     },
     {
-      "phase": "质量门禁",
-      "owner": "Codex 把关",
-      "input": "实现产物与运行结果",
-      "output": "需求符合性审查 + 代码质量审查",
-      "qualityGate": "无阻断缺陷，演示流程可连续完成",
-      "evidence": "验收清单与修复记录"
+      "phase": "03 / Iteration",
+      "title": "图像迭代",
+      "input": "候选图、失败样本、局部问题",
+      "output": "封面、详情图、alt 文本和结果说明",
+      "qualityGate": "视觉统一、信息可读、移动端可展示"
     },
     {
-      "phase": "发布素材",
-      "owner": "Claude Code 产出，Codex 复核",
-      "input": "网站成品与展示重点",
-      "output": "30 秒视频分镜、字幕、剪辑指南、发布文案",
-      "qualityGate": "时码准确、可读性达标、导出参数可用",
-      "evidence": "video 目录素材包"
+      "phase": "04 / Delivery",
+      "title": "归档交付",
+      "input": "最终图像、项目说明、版权和格式信息",
+      "output": "作品详情页、可维护 JSON、可替换资产清单",
+      "qualityGate": "file:// 可打开，外链安全，数据与 fallback 同步"
     }
   ],
-  "milestones": [
-    {
-      "name": "M1 视觉骨架完成",
-      "date": "Day 1",
-      "status": "首页与全局视觉系统完成，导航与动效可运行",
-      "artifactLink": "index.html / styles.css / script.js"
-    },
-    {
-      "name": "M2 网站展示可用",
-      "date": "Day 1",
-      "status": "12 个案例、作品列表、详情与协同专页全部连通",
-      "artifactLink": "works.html / work.html / data/works.json"
-    },
-    {
-      "name": "M3 网站冻结 v1",
-      "date": "Day 1",
-      "status": "本地一键演示流程通过，进入视频素材制作阶段",
-      "artifactLink": "start-demo.ps1 / README.md / DEMO_SCRIPT.md"
-    },
-    {
-      "name": "M4 视频素材包完成",
-      "date": "Day 1",
-      "status": "30 秒分镜、字幕、BGM 卡点与发布文案齐备",
-      "artifactLink": "video/storyboard.md / video/captions.srt"
-    }
+  "deliverables": [
+    "AI 视觉概念封面",
+    "系列详情图与图像说明",
+    "提示词方向与迭代记录",
+    "作品集页面与项目归档结构"
+  ],
+  "stack": [
+    "HTML",
+    "CSS",
+    "Vanilla JS",
+    "JSON",
+    "SVG",
+    "AI image direction"
   ]
 }

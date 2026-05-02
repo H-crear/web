@@ -1,15 +1,21 @@
-# Shanhe Atelier Demo Site
+# Synthetic Atelier / 合成景观档案
 
-一个可直接展示的个人创作作品集成品站点，包含：
+个人 AI 生成创作作品集网站。当前版本保持静态结构：HTML / CSS / 原生 JS / JSON，无复杂框架，支持本地服务与 `file://` 离线打开。
 
-- 多页官网：`首页 / 作品 / 详情 / 协同 / 关于 / 联系`
-- 12 个数据驱动案例：`data/works.json`
-- 协同展示页：`data/collaboration.json`
-- 抖音 30 秒视频素材包：`video/`
+## 内容结构
 
-## 1) 快速启动
+- 首页：个人定位、精选作品、创作方法和合作入口
+- 作品总览：搜索、分类筛选、结果数量
+- 作品详情：项目背景、提示词思路、迭代过程、结果说明、元信息
+- 创作流程：Methodology、阶段输入输出、可交付物
+- 关于：创作者定位、工具栈、擅长方向
+- 联系：合作类型、沟通信息和 brief 入口
 
-在项目根目录执行：
+## 快速查看
+
+直接双击 `index.html` 可以离线打开。页面会优先尝试读取 JSON；在 `file://` 下会自动使用 `data/*-data.js` fallback。
+
+如需本地服务：
 
 ```powershell
 .\start-demo.ps1 -OpenBrowser
@@ -21,77 +27,39 @@
 http://127.0.0.1:5500/index.html
 ```
 
-如需改端口：
+## 维护作品内容
 
-```powershell
-.\start-demo.ps1 -Port 6600 -OpenBrowser
-```
+作品主数据在：
 
-新增参数：
+- `data/works.json`
+- `data/works-data.js`，用于离线 fallback，必须与 JSON 保持同步
 
-```powershell
-# 强制离线模式（不走本地端口）
-.\start-demo.ps1 -Offline -OpenBrowser
-
-# 如果你只想离线启动，也可用专用脚本
-.\start-demo-offline.ps1 -OpenBrowser
-
-# 关闭自动兜底（仅用于排错）
-.\start-demo.ps1 -NoFallback
-```
-
-## 1.1) 如果出现“拒绝连接”
-
-你当前环境可能存在本地网络栈问题（`WinError 10106`），这会导致本地 HTTP 服务无法绑定端口。  
-已内置离线回退模式：可直接双击打开 [index.html](C:\Users\www22\Documents\Codex\2026-04-25\superpowers-plugin-superpowers-openai-curated-claude\index.html) 进行完整演示（作品与协同数据照常加载）。
-
-如需修复本机网络栈，再恢复本地服务模式，可在管理员终端执行：
-
-```powershell
-netsh winsock reset
-```
-
-然后重启系统。
-
-## 2) 目录说明
+每个作品资产放在：
 
 ```text
-.
-├── index.html
-├── works.html
-├── work.html
-├── collaboration.html
-├── about.html
-├── contact.html
-├── styles.css
-├── script.js
-├── home.js / works.js / work.js / collaboration.js
-├── data/
-│   ├── works.json
-│   └── collaboration.json
-├── assets/works/
-│   └── 12 套封面 + 细节 SVG
-├── video/
-│   ├── manifest.json
-│   ├── storyboard.md
-│   ├── captions.srt
-│   ├── bgm-plan.md
-│   ├── edit-guide.md
-│   └── publish-copy.md
-├── CONTENT_GUIDE.md
-└── DEMO_SCRIPT.md
+assets/works/<work-id>/
+├── cover.svg
+├── detail-1.svg
+└── detail-2.svg
 ```
 
-## 3) 验收清单
+更新作品时至少填写：标题、分类、年份、摘要、标签、项目背景、提示词思路、迭代过程、结果说明、图片 alt、元信息中的 credits 和 license。
 
-- 全页面可访问
-- 作品列表可筛选，详情页 `?id=` 正常
-- 无效 `id` 有兜底状态
-- 移动端不破版
-- `prefers-reduced-motion` 下动效可降级
-- 本地服务可一键启动
+## 验证
 
-## 4) 演示顺序
+```powershell
+node scripts/validate-site.js
+```
 
-请按 `DEMO_SCRIPT.md` 进行 5-8 分钟演示。  
-抖音短视频制作请看 `video/edit-guide.md` 和 `video/storyboard.md`。
+验证脚本会检查：
+
+- 8 个作品项目
+- 必填字段完整
+- 作品图片和资产清单存在
+- JSON 与 fallback JS 同步
+- 页面包含 `safe-dom.js`
+- 外链包含安全属性
+
+## 后续替换图片
+
+当前第一版使用可提交仓库的 SVG 风格化作品封面和详情图。后续如接入 image-2 或其他图像生成工具，可在不改数据结构的前提下把 `cover.svg` / `detail-*.svg` 替换为 WebP / PNG，并同步更新 `data/assets-manifest.json`。

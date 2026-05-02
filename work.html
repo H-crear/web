@@ -3,45 +3,48 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>作品详情 · Shanhe Atelier</title>
-    <meta name="description" content="项目详情页，展示作品完整叙事、细节图与上下篇导航。">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <title>作品详情 · Synthetic Atelier</title>
+    <meta name="description" content="Synthetic Atelier 作品详情页，展示项目背景、提示词思路、迭代过程、元信息和图像说明。">
     <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
     <div class="site-shell">
-      <header class="topbar">
-        <div class="container topbar-inner">
-          <a class="brand" href="index.html">
-            <span class="brand-mark parallax"></span>
-            <span>Shanhe Atelier</span>
+      <header class="topbar" id="topbar">
+        <div class="topbar-inner">
+          <a class="brand" href="index.html" aria-label="Synthetic Atelier 首页">
+            <span class="brand-mark" aria-hidden="true"></span>
+            <span><strong>Synthetic Atelier</strong><small>合成景观档案</small></span>
           </a>
-          <button class="menu-toggle" aria-label="展开菜单" aria-expanded="false">☰</button>
-          <nav class="nav">
+          <button class="menu-toggle" id="menuToggle" aria-label="展开菜单" aria-expanded="false" aria-controls="nav">
+            <span></span><span></span><span></span>
+          </button>
+          <nav class="nav" id="nav" aria-label="主导航">
             <a href="index.html">首页</a>
-            <a href="works.html">作品</a>
-            <a href="collaboration.html">协同</a>
-            <a href="about.html">关于</a>
-            <a href="contact.html">联系</a>
+              <a href="works.html" aria-current="page" class="is-active">作品</a>
+              <a href="collaboration.html">方法论</a>
+              <a href="about.html">关于</a>
+              <a href="contact.html">合作</a>
           </nav>
         </div>
       </header>
 
-      <main id="work-detail"></main>
+      <main id="main">
+        <div id="workDetail"></div>
+      </main>
 
       <footer class="footer">
         <div class="container footer-inner">
-          <p>© <span class="current-year"></span> Shanhe Atelier</p>
-          <p>Work Detail Template</p>
+          <p>© <span class="current-year"></span> Synthetic Atelier / 合成景观档案</p>
+          <p>AI visual portfolio · HTML / CSS / JS / JSON</p>
         </div>
       </footer>
     </div>
 
-    <script src="./data/works-data.js"></script>
+    <script src="./safe-dom.js"></script>
     <script src="./data-loader.js"></script>
     <script src="./script.js"></script>
+    <script src="./data/works-data.js"></script>
     <script src="./work.js"></script>
   </body>
 </html>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">记忆珊瑚</title>
+  <desc id="desc">深海中发光的珊瑚状结构包裹着半透明记忆碎片。</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071b25"/>
+      <stop offset="0.56" stop-color="#0e5260"/>
+      <stop offset="1" stop-color="#ef6f5e"/>
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#b5f3ff" stroke-opacity=".12" stroke-width="1"/>
+    </pattern>
+    <filter id="soft">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="760" fill="url(#sky)"/>
+  <rect width="1200" height="760" fill="url(#grid)" opacity=".65"/>
+  <circle cx="237" cy="148" r="119" fill="#40d6b2" opacity=".16" filter="url(#soft)"/>
+  <circle cx="898" cy="198" r="134" fill="#b5f3ff" opacity=".14" filter="url(#soft)"/>
+  <path d="M0 174 C 160 94, 250 294, 420 184 S 720 104, 900 194 S 1090 294, 1200 214 V760 H0Z" fill="#0e5260" opacity=".72"/>
+  <path d="M0 349 C 130 269, 280 384, 430 294 S 720 244, 860 324 S 1070 424, 1200 334 V760 H0Z" fill="#071b25" opacity=".78"/>
+  <g fill="none" stroke="#b5f3ff" stroke-width="3" stroke-linecap="round" opacity=".82">
+    <path d="M170 482 C280 363, 370 578, 510 430 S720 383, 840 470 S990 592, 1080 441"/>
+    <path d="M120 378 L320 324 L520 332 L710 278 L960 310"/>
+    <path d="M230 592 L410 530 L600 608 L790 510 L1010 542"/>
+  </g>
+  <g fill="#40d6b2" stroke="#b5f3ff" stroke-opacity=".8" stroke-width="2">
+    <circle cx="170" cy="482" r="10"/>
+    <circle cx="320" cy="324" r="8"/>
+    <circle cx="510" cy="430" r="12"/>
+    <circle cx="710" cy="278" r="9"/>
+    <circle cx="840" cy="470" r="11"/>
+    <circle cx="1010" cy="542" r="8"/>
+  </g>
+  <g opacity=".9">
+    <rect x="76" y="74" width="320" height="88" rx="6" fill="#071b25" fill-opacity=".72" stroke="#b5f3ff" stroke-opacity=".22"/>
+    <text x="100" y="116" fill="#b5f3ff" font-family="Arial, sans-serif" font-size="22" letter-spacing="2">记忆珊瑚</text>
+    <text x="100" y="146" fill="#40d6b2" font-family="Arial, sans-serif" font-size="18">概念世界观</text>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="14" fill="#b5f3ff" opacity=".78">
+    <text x="940" y="650">ARCHIVE 03</text>
+    <text x="940" y="678">2026 / 概念世界观</text>
+  </g>
+</svg>

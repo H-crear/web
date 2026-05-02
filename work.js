@@ -1,110 +1,125 @@
-function byId(list, id) {
-  return list.find((item) => item.id === id);
+function detailSection(title, body) {
+  const D = window.SafeDOM;
+  return D.el("section", { className: "detail-block" }, [
+    D.el("h2", { text: title }),
+    D.el("p", { text: body })
+  ]);
 }
 
-function renderEmptyState(host) {
-  host.innerHTML = `
-    <section class="section">
-      <div class="container">
-        <div class="empty-state">
-          <h2>作品不存在或链接已失效</h2>
-          <p style="margin-top: 0.6rem;">你可以返回作品总览重新选择案例。</p>
-          <p style="margin-top: 0.9rem;"><a class="btn btn-primary" href="works.html">返回作品页</a></p>
-        </div>
-      </div>
-    </section>
-  `;
+function renderNotFound(host) {
+  window.SafeDOM.clear(host).appendChild(window.SafeDOM.el("section", { className: "page-hero" }, [
+    window.SafeDOM.el("div", { className: "container narrow" }, [
+      window.SafeDOM.el("p", { className: "eyebrow", text: "Not Found" }),
+      window.SafeDOM.el("h1", { text: "没有找到这个作品" }),
+      window.SafeDOM.el("p", { text: "作品可能已经更名，或者链接缺少正确的 id 参数。" }),
+      window.SafeDOM.el("a", { className: "btn btn-primary", href: "works.html", text: "返回作品总览" })
+    ])
+  ]));
 }
 
-function findNeighbors(list, currentIndex) {
-  const previous = currentIndex > 0 ? list[currentIndex - 1] : null;
-  const next = currentIndex < list.length - 1 ? list[currentIndex + 1] : null;
-  return { previous, next };
+function neighborLinks(works, current) {
+  const index = works.findIndex((work) => work.id === current.id);
+  const previous = works[(index - 1 + works.length) % works.length];
+  const next = works[(index + 1) % works.length];
+  const D = window.SafeDOM;
+  return D.el("nav", { className: "detail-nav", "aria-label": "作品前后导航" }, [
+    D.el("a", { href: "work.html?id=" + encodeURIComponent(previous.id) }, [
+      D.el("span", { text: "上一篇" }),
+      D.el("strong", { text: previous.title })
+    ]),
+    D.el("a", { href: "work.html?id=" + encodeURIComponent(next.id) }, [
+      D.el("span", { text: "下一篇" }),
+      D.el("strong", { text: next.title })
+    ])
+  ]);
 }
 
-function renderWork(host, list, item) {
-  const index = list.findIndex((entry) => entry.id === item.id);
-  const { previous, next } = findNeighbors(list, index);
-  const story = (item.story || "").trim();
+function renderWork(host, work, works) {
+  const D = window.SafeDOM;
+  D.clear(host);
+  document.title = work.title + " " + work.titleEn + " · Synthetic Atelier";
+  const metaDescription = document.querySelector('meta[name="description"]');
+  if (metaDescription) metaDescription.setAttribute("content", work.excerpt);
 
-  host.innerHTML = `
-    <section class="detail-hero">
-      <div class="container">
-        <a href="works.html" class="eyebrow">← 返回作品列表</a>
-        <h1>${item.title}</h1>
-        <p class="muted" style="margin-top:0.8rem;">${item.year} · ${item.category}</p>
-        <p style="margin-top:0.8rem; max-width:72ch;">${item.excerpt}</p>
-        <div class="chip-row detail-meta">
-          ${item.tags.map((tag) => `<span class="chip">${tag}</span>`).join("")}
-        </div>
-      </div>
-    </section>
+  const gallery = D.el("div", { className: "detail-gallery" }, [
+    D.el("figure", { className: "detail-cover" }, [
+      D.el("img", { src: work.cover.src, alt: work.cover.alt }),
+      D.el("figcaption", { text: work.cover.alt })
+    ]),
+    ...(work.detailImages || []).map((image) => D.el("figure", {}, [
+      D.el("img", { src: image.src, alt: image.alt }),
+      D.el("figcaption", { text: image.caption })
+    ]))
+  ]);
 
-    <section class="section">
-      <div class="container">
-        <div class="detail-gallery">
-          ${item.detailImages
-            .map(
-              (src, idx) => `
-                <figure class="reveal">
-                  <img src="${src}" alt="${item.title} 细节图 ${idx + 1}" loading="lazy">
-                </figure>
-              `
-            )
-            .join("")}
-        </div>
+  const iterationList = D.el("ol", { className: "process-list detail-process" }, (work.iterations || []).map((item, index) => (
+    D.el("li", {}, [
+      D.el("span", { text: String(index + 1).padStart(2, "0") }),
+      D.el("strong", { text: item.title }),
+      D.el("p", { text: item.text })
+    ])
+  )));
 
-        <div class="detail-story reveal">
-          ${story}
-        </div>
+  const metaList = D.el("dl", { className: "meta-list" }, [
+    D.el("div", {}, [D.el("dt", { text: "工具" }), D.el("dd", { text: (work.meta.tools || []).join(" / ") })]),
+    D.el("div", {}, [D.el("dt", { text: "格式" }), D.el("dd", { text: work.meta.format })]),
+    D.el("div", {}, [D.el("dt", { text: "比例" }), D.el("dd", { text: work.meta.aspectRatio })]),
+    D.el("div", {}, [D.el("dt", { text: "授权" }), D.el("dd", { text: work.meta.license })]),
+    D.el("div", {}, [D.el("dt", { text: "署名" }), D.el("dd", { text: work.meta.credits })])
+  ]);
 
-        <div class="detail-nav">
-          ${
-            previous
-              ? `<a class="btn" href="work.html?id=${encodeURIComponent(previous.id)}">← ${previous.title}</a>`
-              : `<span class="muted">已经是第一项作品</span>`
-          }
-          ${
-            item.externalLink
-              ? `<a class="btn btn-primary" href="${item.externalLink}" target="_blank" rel="noopener">查看外链案例</a>`
-              : `<span class="muted">该案例无外链展示</span>`
-          }
-          ${
-            next
-              ? `<a class="btn" href="work.html?id=${encodeURIComponent(next.id)}">${next.title} →</a>`
-              : `<span class="muted">已经是最后一项作品</span>`
-          }
-        </div>
-      </div>
-    </section>
-  `;
-
-  document.title = `${item.title} · 作品详情`;
-  if (typeof setupReveals === "function") {
-    setupReveals();
-  }
+  host.appendChild(D.fragment([
+    D.el("section", { className: "work-hero" }, [
+      D.el("div", { className: "container work-hero-grid" }, [
+        D.el("div", {}, [
+          D.el("a", { className: "text-link", href: "works.html", text: "返回作品总览" }),
+          D.el("p", { className: "eyebrow", text: work.category + " / " + work.year }),
+          D.el("h1", { text: work.title }),
+          D.el("p", { className: "title-en", text: work.titleEn }),
+          D.el("p", { className: "hero-tagline", text: work.excerpt }),
+          D.el("div", { className: "tag-row" }, (work.tags || []).map((tag) => D.el("span", { className: "tag", text: tag })))
+        ]),
+        D.el("img", { className: "work-hero-image", src: work.cover.src, alt: work.cover.alt })
+      ])
+    ]),
+    D.el("section", { className: "section" }, [
+      D.el("div", { className: "container detail-layout" }, [
+        D.el("div", { className: "detail-main" }, [
+          detailSection("项目背景", work.background),
+          detailSection("提示词思路", work.promptApproach),
+          D.el("section", { className: "detail-block" }, [
+            D.el("h2", { text: "迭代过程" }),
+            iterationList
+          ]),
+          detailSection("结果说明", work.result),
+          D.el("section", { className: "detail-block" }, [
+            D.el("h2", { text: "作品图像" }),
+            gallery
+          ])
+        ]),
+        D.el("aside", { className: "detail-aside" }, [
+          D.el("h2", { text: "作品元信息" }),
+          metaList
+        ])
+      ])
+    ]),
+    D.el("section", { className: "section" }, [
+      D.el("div", { className: "container" }, [
+        neighborLinks(works, work)
+      ])
+    ])
+  ]));
 }
 
 async function initWorkDetailPage() {
-  const host = document.querySelector("#work-detail");
+  const host = document.querySelector("#workDetail");
   if (!host) return;
-
-  const id = new URLSearchParams(location.search).get("id");
-
-  try {
-    const works = await getWorksData();
-    const item = id ? byId(works, id) : null;
-
-    if (!item) {
-      renderEmptyState(host);
-      return;
-    }
-
-    renderWork(host, works, item);
-  } catch (error) {
-    renderEmptyState(host);
-    console.error(error);
-  }
+  const works = await getWorksData();
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("id") || (works[0] && works[0].id);
+  const work = works.find((item) => item.id === id);
+  if (!work) renderNotFound(host);
+  else renderWork(host, work, works);
 }
 
-initWorkDetailPage();
+document.addEventListener("DOMContentLoaded", initWorkDetailPage);

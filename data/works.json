@@ -1,194 +1,474 @@
 [
   {
-    "id": "work-01",
-    "title": "山海志 · 城市晨雾影像计划",
+    "id": "midnight-atlas",
+    "title": "午夜地图集",
+    "titleEn": "Midnight Atlas",
     "year": "2026",
-    "category": "摄影叙事",
-    "cover": "./assets/works/work-01-cover.svg",
-    "excerpt": "以清晨四点到八点的城市状态为样本，重建“慢醒时刻”的视觉叙事。",
-    "tags": ["摄影", "城市", "纪实"],
-    "detailImages": [
-      "./assets/works/work-01-detail-1.svg",
-      "./assets/works/work-01-detail-2.svg",
-      "./assets/works/work-01-detail-3.svg"
+    "category": "概念世界观",
+    "excerpt": "一套把夜行城市想象成可考据地图的 AI 视觉档案，介于城市导览、梦境地理与电影分镜之间。",
+    "tags": [
+      "城市夜行",
+      "地图叙事",
+      "电影感",
+      "档案"
     ],
-    "story": "项目背景：\n客户希望做一组能够代表城市气质的影像内容。\n\n执行策略：\n我把拍摄窗口收敛到日出前后，通过低饱和色和长焦压缩，强化城市层次。\n\n结果：\n形成 24 张核心图和 1 组短片脚本，支持展览与社媒二次发布。",
-    "externalLink": "https://example.com/case/work-01"
+    "featured": true,
+    "cover": {
+      "src": "./assets/works/midnight-atlas/cover.svg",
+      "alt": "深蓝夜色中的抽象城市地图，街区像星座一样发光。"
+    },
+    "detailImages": [
+      {
+        "src": "./assets/works/midnight-atlas/detail-1.svg",
+        "alt": "带有坐标线和霓虹街区编号的午夜城市剖面图。",
+        "caption": "将城市道路处理成天文坐标，强调“迷路也可被归档”的世界观。"
+      },
+      {
+        "src": "./assets/works/midnight-atlas/detail-2.svg",
+        "alt": "黑色纸面上的夜行路线、发光节点和半透明建筑轮廓。",
+        "caption": "细节图保留路线、节点和建筑阴影，方便延展为海报或短片分镜。"
+      }
+    ],
+    "background": "项目设定为一座只在午夜开放的城市档案馆。每条街道既是地理路线，也是人物记忆的索引。",
+    "promptApproach": "关键词围绕 nocturnal cartography、archive interface、cinematic city fragments 展开，并用“低照度、铜色标注、坐标网格”限制风格。",
+    "iterations": [
+      {
+        "title": "建立地图语法",
+        "text": "先生成 3 组道路和建筑关系，筛掉过度科幻的版本，保留最像真实档案的构图。"
+      },
+      {
+        "title": "压低叙事噪音",
+        "text": "第二轮减少人物与车辆，只留下光点、编号和路线，让观看者把注意力放在城市结构。"
+      },
+      {
+        "title": "整理成档案封面",
+        "text": "最后统一色温与标注层级，使封面、局部图和详情图能像同一套研究材料。"
+      }
+    ],
+    "result": "适合作为视觉小说、城市漫游 App、展览导览或音乐现场视觉的世界观预研素材。",
+    "meta": {
+      "tools": [
+        "Midjourney style prompt",
+        "Vector cleanup",
+        "Manual art direction"
+      ],
+      "format": "SVG cover + 2 SVG details",
+      "aspectRatio": "16:10",
+      "license": "Portfolio concept demo, do not resell as stock asset",
+      "credits": "Synthetic Atelier / 合成景观档案"
+    }
   },
   {
-    "id": "work-02",
-    "title": "纸上剧场 · 品牌季刊视觉系统",
+    "id": "porcelain-clouds",
+    "title": "瓷云档案",
+    "titleEn": "Porcelain Clouds",
     "year": "2026",
-    "category": "平面设计",
-    "cover": "./assets/works/work-02-cover.svg",
-    "excerpt": "为创意品牌搭建一套可复用的季刊版式系统，解决内容更新快但视觉不统一的问题。",
-    "tags": ["平面", "杂志", "排版"],
-    "detailImages": [
-      "./assets/works/work-02-detail-1.svg",
-      "./assets/works/work-02-detail-2.svg",
-      "./assets/works/work-02-detail-3.svg"
+    "category": "AI 视觉创作",
+    "excerpt": "把瓷器釉色、云层气象与博物馆标本语言合成在一起，形成轻盈但带有考古感的静物系列。",
+    "tags": [
+      "瓷器",
+      "云层",
+      "静物",
+      "材质"
     ],
-    "story": "项目背景：\n品牌每季度都有内容输出，但排版经常换风格。\n\n执行策略：\n建立 3 套模板网格与固定视觉语法，允许内容变化但保持整体识别。\n\n结果：\n季度更新效率提升，编辑与设计协作成本明显下降。",
-    "externalLink": "https://example.com/case/work-02"
+    "featured": true,
+    "cover": {
+      "src": "./assets/works/porcelain-clouds/cover.svg",
+      "alt": "乳白和青色云朵漂浮在瓷器釉面般的抽象空间中。"
+    },
+    "detailImages": [
+      {
+        "src": "./assets/works/porcelain-clouds/detail-1.svg",
+        "alt": "一组像标本卡片一样排列的瓷白云团和青色釉裂纹。",
+        "caption": "用标本卡片结构承接材质研究，让浪漫图像拥有档案秩序。"
+      },
+      {
+        "src": "./assets/works/porcelain-clouds/detail-2.svg",
+        "alt": "近景展示瓷釉裂纹、柔软云边和半透明编号标签。",
+        "caption": "细节强调釉裂、边缘羽化与半透明标签之间的冲突。"
+      }
+    ],
+    "background": "设想一间未来博物馆收藏了人工培育的云，每一朵云都以瓷器釉色命名并存放在恒温柜中。",
+    "promptApproach": "从 porcelain glaze、museum specimen、soft meteorology、translucent label 四个方向组合，避免普通云海图像。",
+    "iterations": [
+      {
+        "title": "材质优先",
+        "text": "第一轮只测试青花、汝窑、月白等釉色与云层的融合程度。"
+      },
+      {
+        "title": "增加收藏感",
+        "text": "第二轮加入编号、展签和浅景深，让画面从装饰图转向档案图。"
+      },
+      {
+        "title": "控制洁净度",
+        "text": "最后移除过多高光与金属质感，保留安静、潮湿、易碎的气质。"
+      }
+    ],
+    "result": "适合艺术出版物、香氛包装、展览主视觉与材质趋势板。",
+    "meta": {
+      "tools": [
+        "Image prompt design",
+        "Palette system",
+        "SVG art pass"
+      ],
+      "format": "SVG cover + 2 SVG details",
+      "aspectRatio": "4:3",
+      "license": "Portfolio concept demo, do not resell as stock asset",
+      "credits": "Synthetic Atelier / 合成景观档案"
+    }
   },
   {
-    "id": "work-03",
-    "title": "雾光森林 · 专题封面组图",
+    "id": "memory-reef",
+    "title": "记忆珊瑚",
+    "titleEn": "Memory Reef",
+    "year": "2026",
+    "category": "概念世界观",
+    "excerpt": "一座由旧照片、语音碎片和珊瑚结构共同生长的海底记忆库，偏向科幻生态与情绪叙事。",
+    "tags": [
+      "海底",
+      "记忆",
+      "生态科幻",
+      "情绪叙事"
+    ],
+    "featured": true,
+    "cover": {
+      "src": "./assets/works/memory-reef/cover.svg",
+      "alt": "深海中发光的珊瑚状结构包裹着半透明记忆碎片。"
+    },
+    "detailImages": [
+      {
+        "src": "./assets/works/memory-reef/detail-1.svg",
+        "alt": "珊瑚枝杈间悬浮着照片碎片和发光数据气泡。",
+        "caption": "把照片碎片处理成海洋生物附着物，强化记忆“生长”的概念。"
+      },
+      {
+        "src": "./assets/works/memory-reef/detail-2.svg",
+        "alt": "蓝绿色海底剖面里，珊瑚像神经网络一样连接。 ",
+        "caption": "剖面图将生态结构和神经连接结合，方便解释世界观规则。"
+      }
+    ],
+    "background": "作品假设人的回忆会沉入海底，并在矿物盐、声音频率和数据残片之间长成新的珊瑚。",
+    "promptApproach": "用 bioluminescent coral、archival fragments、underwater neural map 形成主体，再以低对比蓝绿控制情绪。",
+    "iterations": [
+      {
+        "title": "避免普通海景",
+        "text": "第一轮剔除海豚、潜水员等直白元素，确保画面中心是“记忆结构”。"
+      },
+      {
+        "title": "建立碎片尺度",
+        "text": "第二轮让照片、气泡和珊瑚枝杈形成明确大小关系，避免全部成为装饰纹理。"
+      },
+      {
+        "title": "增加叙事暗线",
+        "text": "最后用微弱连线和坐标标签提示这是可被检索的档案，而不只是自然景观。"
+      }
+    ],
+    "result": "可延展为沉浸式展览概念、游戏场景设定或音乐专辑视觉。",
+    "meta": {
+      "tools": [
+        "Worldbuilding prompt",
+        "Compositional iteration",
+        "SVG mood study"
+      ],
+      "format": "SVG cover + 2 SVG details",
+      "aspectRatio": "16:9",
+      "license": "Portfolio concept demo, do not resell as stock asset",
+      "credits": "Synthetic Atelier / 合成景观档案"
+    }
+  },
+  {
+    "id": "neon-herbarium",
+    "title": "霓虹植物志",
+    "titleEn": "Neon Herbarium",
     "year": "2025",
-    "category": "图文创意",
-    "cover": "./assets/works/work-03-cover.svg",
-    "excerpt": "将自然题材转译为专题封面，强调“诗性但可传播”的视觉语言。",
-    "tags": ["封面", "自然", "专题"],
-    "detailImages": [
-      "./assets/works/work-03-detail-1.svg",
-      "./assets/works/work-03-detail-2.svg",
-      "./assets/works/work-03-detail-3.svg"
+    "category": "作品档案馆",
+    "excerpt": "把夜间招牌、植物学图谱和人工培育物种融合成一套城市植物标本。",
+    "tags": [
+      "植物志",
+      "霓虹",
+      "城市标本",
+      "图谱"
     ],
-    "story": "项目背景：\n专题内容偏文学，需要更具情绪感染力的首屏。\n\n执行策略：\n以层叠蒙版和微颗粒质感制造空气感，保留文字可读性。\n\n结果：\n封面点击率与停留时长双提升，成为频道长期模板。",
-    "externalLink": "https://example.com/case/work-03"
+    "featured": true,
+    "cover": {
+      "src": "./assets/works/neon-herbarium/cover.svg",
+      "alt": "霓虹色植物枝叶以标本图谱方式排列在深色背景上。"
+    },
+    "detailImages": [
+      {
+        "src": "./assets/works/neon-herbarium/detail-1.svg",
+        "alt": "三株发光植物旁带有编号、拉丁名样式标签和色块标注。",
+        "caption": "用植物学标注语法解释虚构物种，让幻想内容显得可信。"
+      },
+      {
+        "src": "./assets/works/neon-herbarium/detail-2.svg",
+        "alt": "近景展示粉绿霓虹叶脉、暗色根系和透明采集标签。",
+        "caption": "叶脉参考城市灯管走线，根系则保留更自然的手绘感。"
+      }
+    ],
+    "background": "设定中，城市霓虹灯在雨季泄漏光谱，催生出只在夜晚开花的人工植物。",
+    "promptApproach": "以 botanical plate、neon signage、rain-wet asphalt、synthetic species 为核心，要求画面保持图谱而非插画海报。",
+    "iterations": [
+      {
+        "title": "确立图谱版式",
+        "text": "先固定白描式植物布局，再逐步叠加霓虹光谱，避免光效吞掉结构。"
+      },
+      {
+        "title": "做物种差异",
+        "text": "第二轮为每株植物设定不同叶形、根系和发光方式，避免系列重复。"
+      },
+      {
+        "title": "补齐档案信息",
+        "text": "最后加入采集编号、色谱条和微小注释，形成可扩展的档案馆语言。"
+      }
+    ],
+    "result": "适合潮流空间视觉、音乐活动海报、城市幻想主题内容栏目。",
+    "meta": {
+      "tools": [
+        "Prompt matrix",
+        "Specimen layout",
+        "SVG illustration"
+      ],
+      "format": "SVG cover + 2 SVG details",
+      "aspectRatio": "3:2",
+      "license": "Portfolio concept demo, do not resell as stock asset",
+      "credits": "Synthetic Atelier / 合成景观档案"
+    }
   },
   {
-    "id": "work-04",
-    "title": "夜色档案 · 旧街区摄影地图",
+    "id": "lunar-street-market",
+    "title": "月面夜市",
+    "titleEn": "Lunar Street Market",
     "year": "2025",
-    "category": "摄影叙事",
-    "cover": "./assets/works/work-04-cover.svg",
-    "excerpt": "基于夜间步行路线建立影像地图，串联空间、人物和时间线。",
-    "tags": ["夜景", "地图", "纪录"],
-    "detailImages": [
-      "./assets/works/work-04-detail-1.svg",
-      "./assets/works/work-04-detail-2.svg",
-      "./assets/works/work-04-detail-3.svg"
+    "category": "AI 视觉创作",
+    "excerpt": "在月球基地边缘搭建一条有烟火气的夜市街，把硬科幻场景转译成可居住的日常。",
+    "tags": [
+      "月面",
+      "夜市",
+      "生活科幻",
+      "场景设计"
     ],
-    "story": "项目背景：\n文旅内容需要一套可导览、可阅读的夜游视觉资产。\n\n执行策略：\n把路线上关键节点拍成连续镜头，并附简短文本卡片。\n\n结果：\n线上导览页面上线后，互动收藏率明显增长。",
-    "externalLink": "https://example.com/case/work-04"
+    "featured": false,
+    "cover": {
+      "src": "./assets/works/lunar-street-market/cover.svg",
+      "alt": "月面基地旁的夜市摊位发出暖光，远处能看到地球弧光。"
+    },
+    "detailImages": [
+      {
+        "src": "./assets/works/lunar-street-market/detail-1.svg",
+        "alt": "月面夜市摊位、透明穹顶和手写招牌构成的场景草图。",
+        "caption": "用暖色摊位灯光打破冷硬太空基地，使空间变得有人味。"
+      },
+      {
+        "src": "./assets/works/lunar-street-market/detail-2.svg",
+        "alt": "摊位菜单、氧气罐、月壤地面和地球光组成的细节图。",
+        "caption": "小物件承担世界观说明，减少页面上直接解释的负担。"
+      }
+    ],
+    "background": "项目想象第一批月面移民如何把临时补给点改造成夜市，让陌生星球出现熟悉的人间秩序。",
+    "promptApproach": "组合 lunar colony、night market、warm food stall、earthrise background，并限制镜头为半纪实街拍。",
+    "iterations": [
+      {
+        "title": "平衡科幻与烟火气",
+        "text": "第一轮过于太空歌剧，后来压低基地尺度，把摊位、桌椅和招牌作为主角。"
+      },
+      {
+        "title": "补充生活细节",
+        "text": "第二轮加入保温箱、氧气接口、菜单灯箱等物件，强化场景可信度。"
+      },
+      {
+        "title": "统一光源",
+        "text": "最后让地球冷光与摊位暖光形成清晰对比，使封面更有记忆点。"
+      }
+    ],
+    "result": "适合品牌联名视觉、科幻短片场景、游戏市集关卡概念。",
+    "meta": {
+      "tools": [
+        "Scene prompt",
+        "Mood references",
+        "SVG key art"
+      ],
+      "format": "SVG cover + 2 SVG details",
+      "aspectRatio": "21:9",
+      "license": "Portfolio concept demo, do not resell as stock asset",
+      "credits": "Synthetic Atelier / 合成景观档案"
+    }
   },
   {
-    "id": "work-05",
-    "title": "序章海报 · 展览主视觉",
+    "id": "glass-monsoon",
+    "title": "玻璃季风",
+    "titleEn": "Glass Monsoon",
     "year": "2025",
-    "category": "平面设计",
-    "cover": "./assets/works/work-05-cover.svg",
-    "excerpt": "为年度展览制作主视觉海报及延展物料，建立统一传播风格。",
-    "tags": ["海报", "展览", "品牌"],
-    "detailImages": [
-      "./assets/works/work-05-detail-1.svg",
-      "./assets/works/work-05-detail-2.svg",
-      "./assets/works/work-05-detail-3.svg"
+    "category": "创作流程展示",
+    "excerpt": "以季风、玻璃幕墙与潮湿街道为基础，探索透明材质如何承载天气叙事。",
+    "tags": [
+      "季风",
+      "玻璃",
+      "天气系统",
+      "材质研究"
     ],
-    "story": "项目背景：\n展览需要线上线下一体化主视觉，覆盖海报、票面和导视。\n\n执行策略：\n使用高对比色块和模块化标题系统，便于快速适配尺寸。\n\n结果：\n3 天内完成全渠道物料并保持风格一致。",
-    "externalLink": "https://example.com/case/work-05"
+    "featured": false,
+    "cover": {
+      "src": "./assets/works/glass-monsoon/cover.svg",
+      "alt": "雨季城市中玻璃幕墙折射出绿色、银色和橙色光线。"
+    },
+    "detailImages": [
+      {
+        "src": "./assets/works/glass-monsoon/detail-1.svg",
+        "alt": "玻璃碎片、雨滴轨迹和风向线构成的抽象天气图。",
+        "caption": "将风向线和雨滴轨迹作为构图骨架，避免只停留在材质贴图。"
+      },
+      {
+        "src": "./assets/works/glass-monsoon/detail-2.svg",
+        "alt": "湿润街道倒影中出现玻璃建筑、信号灯和季风标注。",
+        "caption": "用倒影层建立城市空间，保留可被商业项目复用的高级感。"
+      }
+    ],
+    "background": "它来自一次关于“天气作为品牌资产”的视觉实验：让季风像产品系统一样有色彩、节奏和识别度。",
+    "promptApproach": "关键词集中在 monsoon diagram、glass facade、wet reflection、weather interface，并反复控制透明层次。",
+    "iterations": [
+      {
+        "title": "拆解天气层",
+        "text": "先分别生成风、雨、倒影、玻璃材质，再筛选能同时成立的组合。"
+      },
+      {
+        "title": "控制透明关系",
+        "text": "第二轮减少重叠元素，让视线能从前景雨滴穿过玻璃进入城市。"
+      },
+      {
+        "title": "形成流程图",
+        "text": "最后将图像拆成封面与细节页，展示从材质实验到完整视觉的过程。"
+      }
+    ],
+    "result": "适合建筑品牌、天气主题活动、城市更新项目的视觉预研。",
+    "meta": {
+      "tools": [
+        "Material prompt tests",
+        "Palette constraints",
+        "SVG composition"
+      ],
+      "format": "SVG cover + 2 SVG details",
+      "aspectRatio": "5:4",
+      "license": "Portfolio concept demo, do not resell as stock asset",
+      "credits": "Synthetic Atelier / 合成景观档案"
+    }
   },
   {
-    "id": "work-06",
-    "title": "夏夜行记 · 社媒栏目升级",
-    "year": "2025",
-    "category": "图文创意",
-    "cover": "./assets/works/work-06-cover.svg",
-    "excerpt": "把零散的旅行图文升级为有栏目识别度的内容系列。",
-    "tags": ["社媒", "栏目", "叙事"],
-    "detailImages": [
-      "./assets/works/work-06-detail-1.svg",
-      "./assets/works/work-06-detail-2.svg",
-      "./assets/works/work-06-detail-3.svg"
-    ],
-    "story": "项目背景：\n原有内容质量不错，但缺少连续性。\n\n执行策略：\n制定封面编号系统、固定版头和结尾模板，形成系列感。\n\n结果：\n连续 6 周发布后，账号整体调性更集中。",
-    "externalLink": "https://example.com/case/work-06"
-  },
-  {
-    "id": "work-07",
-    "title": "旧梦新刊 · 文艺专栏改版",
+    "id": "satellite-garden",
+    "title": "卫星花园",
+    "titleEn": "Satellite Garden",
     "year": "2024",
-    "category": "平面设计",
-    "cover": "./assets/works/work-07-cover.svg",
-    "excerpt": "在保留老读者记忆点的前提下，完成文艺专栏视觉焕新。",
-    "tags": ["改版", "排版", "读者体验"],
-    "detailImages": [
-      "./assets/works/work-07-detail-1.svg",
-      "./assets/works/work-07-detail-2.svg",
-      "./assets/works/work-07-detail-3.svg"
+    "category": "作品档案馆",
+    "excerpt": "一组围绕轨道农业、卫星天线与花园温室的视觉设定，讨论技术系统如何变成景观。",
+    "tags": [
+      "轨道农业",
+      "卫星",
+      "温室",
+      "系统景观"
     ],
-    "story": "项目背景：\n旧版栏目视觉陈旧，移动端阅读体验不佳。\n\n执行策略：\n重构字号层级和留白节奏，同时保留原有标题风格。\n\n结果：\n改版后阅读完成率提升，老用户反馈稳定。",
-    "externalLink": "https://example.com/case/work-07"
+    "featured": false,
+    "cover": {
+      "src": "./assets/works/satellite-garden/cover.svg",
+      "alt": "轨道卫星上漂浮着温室花园和圆形天线结构。"
+    },
+    "detailImages": [
+      {
+        "src": "./assets/works/satellite-garden/detail-1.svg",
+        "alt": "卫星花园的圆形温室、太阳能板和植物培养舱示意图。",
+        "caption": "以设施剖面解释技术结构，同时保留花园的柔软感。"
+      },
+      {
+        "src": "./assets/works/satellite-garden/detail-2.svg",
+        "alt": "太空背景下的温室植物、轨道线和银绿色模块编号。",
+        "caption": "轨道线作为装饰与信息层，连接所有画面形成系统感。"
+      }
+    ],
+    "background": "项目设定未来小型卫星不再只是通讯节点，也会成为漂浮花园、种子库和气候观测站。",
+    "promptApproach": "以 orbital greenhouse、satellite array、botanical module、technical diagram 组合，避免变成普通太空站概念图。",
+    "iterations": [
+      {
+        "title": "先做系统图",
+        "text": "第一轮优先确定卫星、天线、温室和植物舱的空间关系。"
+      },
+      {
+        "title": "增加园艺感",
+        "text": "第二轮加入叶片、培养盘和湿润光泽，让技术图不显得冰冷。"
+      },
+      {
+        "title": "整理模块语言",
+        "text": "最后将太阳能板、轨道线和编号做成可复用视觉组件。"
+      }
+    ],
+    "result": "适合作为可持续科技品牌、科普展陈或未来农业项目的视觉母题。",
+    "meta": {
+      "tools": [
+        "System diagram prompt",
+        "SVG diagramming",
+        "Art direction"
+      ],
+      "format": "SVG cover + 2 SVG details",
+      "aspectRatio": "16:10",
+      "license": "Portfolio concept demo, do not resell as stock asset",
+      "credits": "Synthetic Atelier / 合成景观档案"
+    }
   },
   {
-    "id": "work-08",
-    "title": "山谷之上 · 轻户外品牌图册",
+    "id": "desert-signal-library",
+    "title": "沙丘信号图书馆",
+    "titleEn": "Desert Signal Library",
     "year": "2024",
-    "category": "图文创意",
-    "cover": "./assets/works/work-08-cover.svg",
-    "excerpt": "用图文叙事表达轻户外品牌的节奏感与生活方式主张。",
-    "tags": ["品牌图册", "户外", "生活方式"],
-    "detailImages": [
-      "./assets/works/work-08-detail-1.svg",
-      "./assets/works/work-08-detail-2.svg",
-      "./assets/works/work-08-detail-3.svg"
+    "category": "创作流程展示",
+    "excerpt": "把沙丘、无线电信号和图书馆索引系统结合，形成一座在荒漠中接收旧文明讯号的档案设施。",
+    "tags": [
+      "沙漠",
+      "信号",
+      "图书馆",
+      "文明遗迹"
     ],
-    "story": "项目背景：\n品牌希望图册既能展示产品，也能呈现生活场景。\n\n执行策略：\n采用“人物故事 + 产品插页”双线结构，提升阅读代入。\n\n结果：\n图册成为线下活动与线上招商的统一展示材料。",
-    "externalLink": "https://example.com/case/work-08"
-  },
-  {
-    "id": "work-09",
-    "title": "岛屿手记 · 人像叙事项目",
-    "year": "2024",
-    "category": "摄影叙事",
-    "cover": "./assets/works/work-09-cover.svg",
-    "excerpt": "通过人物采访与肖像组合，呈现海岛社区的真实日常。",
-    "tags": ["人像", "采访", "纪实"],
+    "featured": false,
+    "cover": {
+      "src": "./assets/works/desert-signal-library/cover.svg",
+      "alt": "橙色沙丘中的黑色图书馆塔发出绿色无线电信号。"
+    },
     "detailImages": [
-      "./assets/works/work-09-detail-1.svg",
-      "./assets/works/work-09-detail-2.svg",
-      "./assets/works/work-09-detail-3.svg"
+      {
+        "src": "./assets/works/desert-signal-library/detail-1.svg",
+        "alt": "沙漠剖面、信号波纹、索引卡片和图书馆塔的组合图。",
+        "caption": "将沙丘剖面与信号波纹叠在一起，让地形也成为信息载体。"
+      },
+      {
+        "src": "./assets/works/desert-signal-library/detail-2.svg",
+        "alt": "旧文明信号被整理成绿色索引卡片，背景是暗金沙丘。",
+        "caption": "细节图把抽象讯号转译为目录卡片，承接“图书馆”的叙事。"
+      }
     ],
-    "story": "项目背景：\n地方机构需要一套有人物温度的传播内容。\n\n执行策略：\n每位人物以“肖像 + 手写语句 + 场景照片”构成单元。\n\n结果：\n形成可巡展的图文套组，线上转发效率高。",
-    "externalLink": "https://example.com/case/work-09"
-  },
-  {
-    "id": "work-10",
-    "title": "漂流读本 · 文化活动视觉套件",
-    "year": "2024",
-    "category": "平面设计",
-    "cover": "./assets/works/work-10-cover.svg",
-    "excerpt": "为系列读书活动提供主视觉、社媒卡片和会场导视模板。",
-    "tags": ["活动", "视觉套件", "传播"],
-    "detailImages": [
-      "./assets/works/work-10-detail-1.svg",
-      "./assets/works/work-10-detail-2.svg",
-      "./assets/works/work-10-detail-3.svg"
+    "background": "这是一座远离城市的图书馆，它不收藏书，而是接收、翻译并封存穿越沙漠的失落讯号。",
+    "promptApproach": "使用 desert archive、radio signal、brutalist library、index card interface 组合，并保留高温空气的颗粒感。",
+    "iterations": [
+      {
+        "title": "确认主视觉符号",
+        "text": "先让沙丘、图书馆塔和信号波纹同时出现，确保主题一眼可读。"
+      },
+      {
+        "title": "建立信息层",
+        "text": "第二轮把信号转成索引卡片、编号和频段条，形成可讲述的流程。"
+      },
+      {
+        "title": "收束色彩",
+        "text": "最后控制在沙金、碳黑和信号绿三组颜色内，提升系列识别度。"
+      }
     ],
-    "story": "项目背景：\n活动频次高，单次定制成本过大。\n\n执行策略：\n输出可配置模板，活动方只需替换主题与时间信息。\n\n结果：\n多场活动视觉一致，执行时间大幅缩短。",
-    "externalLink": "https://example.com/case/work-10"
-  },
-  {
-    "id": "work-11",
-    "title": "北窗来信 · 城市角落计划",
-    "year": "2023",
-    "category": "摄影叙事",
-    "cover": "./assets/works/work-11-cover.svg",
-    "excerpt": "聚焦城市被忽略的空间角落，以慢节奏影像寻找新的观看方式。",
-    "tags": ["慢摄影", "城市角落", "系列化"],
-    "detailImages": [
-      "./assets/works/work-11-detail-1.svg",
-      "./assets/works/work-11-detail-2.svg",
-      "./assets/works/work-11-detail-3.svg"
-    ],
-    "story": "项目背景：\n希望做长期更新的个人影像栏目，建立稳定风格。\n\n执行策略：\n统一构图比例与注释文本格式，形成栏目语言。\n\n结果：\n连续发布 30 周，形成高辨识视觉资产。",
-    "externalLink": "https://example.com/case/work-11"
-  },
-  {
-    "id": "work-12",
-    "title": "无尽夏 · 品牌联名视觉实验",
-    "year": "2023",
-    "category": "图文创意",
-    "cover": "./assets/works/work-12-cover.svg",
-    "excerpt": "结合联名产品和故事短片，打造一套可跨平台传播的视觉实验。",
-    "tags": ["联名", "跨平台", "实验视觉"],
-    "detailImages": [
-      "./assets/works/work-12-detail-1.svg",
-      "./assets/works/work-12-detail-2.svg",
-      "./assets/works/work-12-detail-3.svg"
-    ],
-    "story": "项目背景：\n品牌合作需要同时兼顾新品介绍与情绪表达。\n\n执行策略：\n主 KV 保持统一，渠道侧按平台节奏拆分内容比例。\n\n结果：\n上线后在多个平台形成统一认知，内容复用率高。",
-    "externalLink": "https://example.com/case/work-12"
+    "result": "适合文学播客视觉、概念展览、独立游戏世界观或文化空间提案。",
+    "meta": {
+      "tools": [
+        "Narrative prompt",
+        "Archive layout",
+        "SVG visual system"
+      ],
+      "format": "SVG cover + 2 SVG details",
+      "aspectRatio": "3:2",
+      "license": "Portfolio concept demo, do not resell as stock asset",
+      "credits": "Synthetic Atelier / 合成景观档案"
+    }
   }
 ]

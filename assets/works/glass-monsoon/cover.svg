@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Glass Monsoon</title>
+  <desc id="desc">雨季城市中玻璃幕墙折射出绿色、银色和橙色光线。</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101719"/>
+      <stop offset="0.56" stop-color="#20434a"/>
+      <stop offset="1" stop-color="#f08b52"/>
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#dce8e6" stroke-opacity=".12" stroke-width="1"/>
+    </pattern>
+    <filter id="soft">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="760" fill="url(#sky)"/>
+  <rect width="1200" height="760" fill="url(#grid)" opacity=".65"/>
+  <circle cx="294" cy="130" r="128" fill="#7fd2c6" opacity=".16" filter="url(#soft)"/>
+  <circle cx="856" cy="180" r="128" fill="#dce8e6" opacity=".14" filter="url(#soft)"/>
+  <path d="M0 192 C 160 112, 250 312, 420 202 S 720 122, 900 212 S 1090 312, 1200 232 V760 H0Z" fill="#20434a" opacity=".72"/>
+  <path d="M0 367 C 130 287, 280 402, 430 312 S 720 262, 860 342 S 1070 442, 1200 352 V760 H0Z" fill="#101719" opacity=".78"/>
+  <g fill="none" stroke="#7fd2c6" stroke-width="3" stroke-linecap="round" opacity=".82">
+    <path d="M170 500 C280 336, 370 560, 510 430 S720 365, 840 440 S990 610, 1080 462"/>
+    <path d="M120 360 L320 348 L520 350 L710 260 L960 310"/>
+    <path d="M230 610 L410 530 L600 590 L790 510 L1010 524"/>
+  </g>
+  <g fill="#7fd2c6" stroke="#dce8e6" stroke-opacity=".8" stroke-width="2">
+    <circle cx="170" cy="500" r="10"/>
+    <circle cx="320" cy="348" r="8"/>
+    <circle cx="510" cy="430" r="12"/>
+    <circle cx="710" cy="260" r="9"/>
+    <circle cx="840" cy="440" r="11"/>
+    <circle cx="1010" cy="524" r="8"/>
+  </g>
+  <g opacity=".9">
+    <rect x="76" y="74" width="320" height="88" rx="6" fill="#101719" fill-opacity=".72" stroke="#dce8e6" stroke-opacity=".22"/>
+    <text x="100" y="116" fill="#dce8e6" font-family="Arial, sans-serif" font-size="22" letter-spacing="2">Glass Monsoon</text>
+    <text x="100" y="146" fill="#7fd2c6" font-family="Arial, sans-serif" font-size="18">玻璃季风</text>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="14" fill="#dce8e6" opacity=".78">
+    <text x="940" y="650">ARCHIVE 06</text>
+    <text x="940" y="678">2025 / 创作流程展示</text>
+  </g>
+</svg>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">沙丘信号图书馆</title>
+  <desc id="desc">橙色沙丘中的黑色图书馆塔发出绿色无线电信号。</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1c1510"/>
+      <stop offset="0.56" stop-color="#9a6032"/>
+      <stop offset="1" stop-color="#53e089"/>
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#171b18" stroke-opacity=".12" stroke-width="1"/>
+    </pattern>
+    <filter id="soft">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="760" fill="url(#sky)"/>
+  <rect width="1200" height="760" fill="url(#grid)" opacity=".65"/>
+  <circle cx="332" cy="148" r="134" fill="#f2c06a" opacity=".16" filter="url(#soft)"/>
+  <circle cx="828" cy="198" r="124" fill="#171b18" opacity=".14" filter="url(#soft)"/>
+  <path d="M0 234 C 160 154, 250 354, 420 244 S 720 164, 900 254 S 1090 354, 1200 274 V760 H0Z" fill="#9a6032" opacity=".72"/>
+  <path d="M0 409 C 130 329, 280 444, 430 354 S 720 304, 860 384 S 1070 484, 1200 394 V760 H0Z" fill="#1c1510" opacity=".78"/>
+  <g fill="none" stroke="#171b18" stroke-width="3" stroke-linecap="round" opacity=".82">
+    <path d="M170 482 C280 318, 370 578, 510 430 S720 383, 840 420 S990 592, 1080 476"/>
+    <path d="M120 378 L320 364 L520 332 L710 278 L960 310"/>
+    <path d="M230 592 L410 530 L600 608 L790 510 L1010 512"/>
+  </g>
+  <g fill="#f2c06a" stroke="#171b18" stroke-opacity=".8" stroke-width="2">
+    <circle cx="170" cy="482" r="10"/>
+    <circle cx="320" cy="364" r="8"/>
+    <circle cx="510" cy="430" r="12"/>
+    <circle cx="710" cy="278" r="9"/>
+    <circle cx="840" cy="420" r="11"/>
+    <circle cx="1010" cy="512" r="8"/>
+  </g>
+  <g opacity=".9">
+    <rect x="76" y="74" width="320" height="88" rx="6" fill="#1c1510" fill-opacity=".72" stroke="#171b18" stroke-opacity=".22"/>
+    <text x="100" y="116" fill="#171b18" font-family="Arial, sans-serif" font-size="22" letter-spacing="2">沙丘信号图书馆</text>
+    <text x="100" y="146" fill="#f2c06a" font-family="Arial, sans-serif" font-size="18">创作流程展示</text>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="14" fill="#171b18" opacity=".78">
+    <text x="940" y="650">ARCHIVE 08</text>
+    <text x="940" y="678">2024 / 创作流程展示</text>
+  </g>
+</svg>

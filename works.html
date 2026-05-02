@@ -3,60 +3,68 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>作品总览 · Shanhe Atelier</title>
-    <meta name="description" content="12 个完整作品案例总览，支持分类浏览与详情跳转。">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <title>作品总览 · Synthetic Atelier</title>
+    <meta name="description" content="Synthetic Atelier 的 AI 生成作品总览，支持搜索、分类筛选和结果计数。">
     <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
     <div class="site-shell">
-      <header class="topbar">
-        <div class="container topbar-inner">
-          <a class="brand" href="index.html">
-            <span class="brand-mark parallax"></span>
-            <span>Shanhe Atelier</span>
+      <header class="topbar" id="topbar">
+        <div class="topbar-inner">
+          <a class="brand" href="index.html" aria-label="Synthetic Atelier 首页">
+            <span class="brand-mark" aria-hidden="true"></span>
+            <span><strong>Synthetic Atelier</strong><small>合成景观档案</small></span>
           </a>
-          <button class="menu-toggle" aria-label="展开菜单" aria-expanded="false">☰</button>
-          <nav class="nav">
+          <button class="menu-toggle" id="menuToggle" aria-label="展开菜单" aria-expanded="false" aria-controls="nav">
+            <span></span><span></span><span></span>
+          </button>
+          <nav class="nav" id="nav" aria-label="主导航">
             <a href="index.html">首页</a>
-            <a href="works.html">作品</a>
-            <a href="collaboration.html">协同</a>
-            <a href="about.html">关于</a>
-            <a href="contact.html">联系</a>
+              <a href="works.html" aria-current="page" class="is-active">作品</a>
+              <a href="collaboration.html">方法论</a>
+              <a href="about.html">关于</a>
+              <a href="contact.html">合作</a>
           </nav>
         </div>
       </header>
 
-      <main>
-        <section class="hero">
-          <div class="container">
-            <span class="eyebrow reveal">Portfolio Index</span>
-            <h1 class="reveal">12 个完整案例，覆盖图文、平面与摄影创作</h1>
-            <p class="reveal">每个案例都包含项目背景、视觉策略、执行过程与成果截图，便于演示与复盘。</p>
-            <div id="works-filters" class="filter-bar reveal"></div>
+      <main id="main">
+        <section class="page-hero">
+          <div class="container narrow">
+            <p class="eyebrow">Archive Index</p>
+            <h1>作品总览</h1>
+            <p>8 个 AI 生成项目被整理成可检索档案。你可以按关键词、标题、标签或类别筛选，快速进入每个项目的生成思路与迭代记录。</p>
           </div>
         </section>
 
-        <section class="section" style="padding-top:1.1rem;">
+        <section class="section archive-section">
           <div class="container">
-            <div id="works-grid" class="work-grid"></div>
+            <div class="works-tools" aria-label="作品筛选">
+              <label class="search-field">
+                <span>搜索</span>
+                <input id="workSearch" type="search" placeholder="试试：海底、霓虹、世界观、SVG" autocomplete="off">
+              </label>
+              <div id="categoryFilters" class="filter-bar" aria-label="分类筛选"></div>
+              <p id="resultCount" class="result-count" aria-live="polite"></p>
+            </div>
+            <div id="worksGrid" class="work-grid"></div>
           </div>
         </section>
       </main>
 
       <footer class="footer">
         <div class="container footer-inner">
-          <p>© <span class="current-year"></span> Shanhe Atelier</p>
-          <p>Data-driven Showcase</p>
+          <p>© <span class="current-year"></span> Synthetic Atelier / 合成景观档案</p>
+          <p>AI visual portfolio · HTML / CSS / JS / JSON</p>
         </div>
       </footer>
     </div>
 
-    <script src="./data/works-data.js"></script>
+    <script src="./safe-dom.js"></script>
     <script src="./data-loader.js"></script>
     <script src="./script.js"></script>
+    <script src="./data/works-data.js"></script>
     <script src="./works.js"></script>
   </body>
 </html>

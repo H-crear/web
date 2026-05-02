@@ -1,90 +1,101 @@
-let allWorks = [];
-let activeCategory = "全部";
-
-function uniqueCategories(works) {
-  return ["全部", ...new Set(works.map((item) => item.category))];
+function normalize(value) {
+  return String(value || "").trim().toLowerCase();
 }
 
-function renderFilters(categories) {
-  const host = document.querySelector("#works-filters");
+function createWorkCard(work) {
+  const D = window.SafeDOM;
+  const tags = (work.tags || []).map((tag) => D.el("span", { className: "tag", text: tag }));
+  return D.el("article", { className: "work-card is-visible" }, [
+    D.el("a", { className: "work-thumb", href: "work.html?id=" + encodeURIComponent(work.id), "aria-label": "查看 " + work.title }, [
+      D.el("img", { src: work.cover.src, alt: work.cover.alt })
+    ]),
+    D.el("div", { className: "work-card-body" }, [
+      D.el("div", { className: "work-meta-line" }, [
+        D.el("span", { text: work.category }),
+        D.el("span", { text: work.year })
+      ]),
+      D.el("h2", {}, [
+        D.el("a", { href: "work.html?id=" + encodeURIComponent(work.id), text: work.title + " " + work.titleEn })
+      ]),
+      D.el("p", { text: work.excerpt }),
+      D.el("div", { className: "tag-row" }, tags)
+    ])
+  ]);
+}
+
+function matchesSearch(work, query) {
+  if (!query) return true;
+  const haystack = [
+    work.title,
+    work.titleEn,
+    work.category,
+    work.excerpt,
+    work.background,
+    work.promptApproach,
+    ...(work.tags || [])
+  ].map(normalize).join(" ");
+  return haystack.includes(query);
+}
+
+function renderFilters(categories, activeCategory, onChange) {
+  const host = document.querySelector("#categoryFilters");
   if (!host) return;
-
-  host.innerHTML = categories
-    .map(
-      (category) => `
-      <button
-        class="filter-btn ${category === activeCategory ? "active" : ""}"
-        data-category="${category}"
-        type="button"
-      >
-        ${category}
-      </button>`
-    )
-    .join("");
-
-  host.querySelectorAll(".filter-btn").forEach((button) => {
-    button.addEventListener("click", () => {
-      activeCategory = button.dataset.category || "全部";
-      renderFilters(categories);
-      renderWorks();
-    });
+  window.SafeDOM.clear(host);
+  ["全部", ...categories].forEach((category) => {
+    const pressed = category === activeCategory;
+    host.appendChild(window.SafeDOM.el("button", {
+      type: "button",
+      className: "filter-chip" + (pressed ? " is-active" : ""),
+      "aria-pressed": String(pressed),
+      text: category,
+      onclick: () => onChange(category)
+    }));
   });
 }
 
-function renderWorks() {
-  const host = document.querySelector("#works-grid");
-  if (!host) return;
-
-  const filtered =
-    activeCategory === "全部"
-      ? allWorks
-      : allWorks.filter((item) => item.category === activeCategory);
-
-  if (!filtered.length) {
-    host.innerHTML = `<div class="empty-state">该分类暂时没有作品，换一个看看。</div>`;
-    return;
+function renderWorks(works, state) {
+  const D = window.SafeDOM;
+  const grid = document.querySelector("#worksGrid");
+  const count = document.querySelector("#resultCount");
+  if (!grid) return;
+  const query = normalize(state.query);
+  const filtered = works.filter((work) => {
+    const categoryMatch = state.category === "全部" || work.category === state.category;
+    return categoryMatch && matchesSearch(work, query);
+  });
+  D.clear(grid);
+  if (filtered.length === 0) {
+    grid.appendChild(D.el("div", { className: "empty-state" }, [
+      D.el("h2", { text: "没有找到匹配作品" }),
+      D.el("p", { text: "换一个关键词或切回全部分类试试。" })
+    ]));
+  } else {
+    filtered.forEach((work) => grid.appendChild(createWorkCard(work)));
   }
-
-  host.innerHTML = filtered
-    .sort((a, b) => Number(b.year) - Number(a.year))
-    .map(
-      (item) => `
-        <article class="work-card reveal">
-          <a href="work.html?id=${encodeURIComponent(item.id)}" aria-label="查看 ${item.title}">
-            <div class="work-cover">
-              <img src="${item.cover}" alt="${item.title} 封面" loading="lazy">
-            </div>
-            <div class="work-body">
-              <h3>${item.title}</h3>
-              <p class="muted">${item.year} · ${item.category}</p>
-              <p>${item.excerpt}</p>
-              <div class="chip-row">
-                ${item.tags.map((tag) => `<span class="chip">${tag}</span>`).join("")}
-              </div>
-            </div>
-          </a>
-        </article>
-      `
-    )
-    .join("");
-
-  if (typeof setupReveals === "function") {
-    setupReveals();
+  if (count) {
+    count.textContent = "显示 " + filtered.length + " / " + works.length + " 个项目";
   }
 }
 
 async function initWorksPage() {
-  try {
-    allWorks = await getWorksData();
-    renderFilters(uniqueCategories(allWorks));
-    renderWorks();
-  } catch (error) {
-    const host = document.querySelector("#works-grid");
-    if (host) {
-      host.innerHTML = `<div class="empty-state">作品数据加载失败，请检查 data/works.json 或 data/works-data.js。</div>`;
-    }
-    console.error(error);
+  const works = await getWorksData();
+  const categories = [...new Set(works.map((work) => work.category))];
+  const state = { query: "", category: "全部" };
+  const search = document.querySelector("#workSearch");
+  const sync = () => {
+    renderFilters(categories, state.category, (category) => {
+      state.category = category;
+      sync();
+    });
+    renderWorks(works, state);
+  };
+  if (search) {
+    search.addEventListener("input", () => {
+      state.query = search.value;
+      renderWorks(works, state);
+    });
   }
+  sync();
 }
 
-initWorksPage();
+document.addEventListener("DOMContentLoaded", initWorksPage);

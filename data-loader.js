@@ -1,29 +1,26 @@
-async function loadJsonWithFallback(jsonPath, fallbackValue) {
-  if (location.protocol === "file:" && fallbackValue) {
-    return fallbackValue;
-  }
-
+async function loadJsonWithFallback(url, fallbackName, fallbackDefault) {
   try {
-    const response = await fetch(jsonPath);
-    if (!response.ok) {
-      throw new Error(`Failed to fetch ${jsonPath}: ${response.status}`);
+    if (window.location.protocol === "file:") {
+      throw new Error("Use inline fallback for file protocol");
     }
+    const response = await fetch(url, { cache: "no-cache" });
+    if (!response.ok) throw new Error("Failed to load " + url);
     return await response.json();
   } catch (error) {
-    if (fallbackValue) {
-      return fallbackValue;
-    }
-    throw error;
+    const fallback = window[fallbackName];
+    if (fallback !== undefined) return fallback;
+    return fallbackDefault;
   }
 }
 
 function getWorksData() {
-  return loadJsonWithFallback("./data/works.json", window.WORKS_DATA || null);
+  return loadJsonWithFallback("./data/works.json", "WORKS_DATA", []);
 }
 
 function getCollaborationData() {
-  return loadJsonWithFallback(
-    "./data/collaboration.json",
-    window.COLLAB_DATA || null
-  );
+  return loadJsonWithFallback("./data/collaboration.json", "COLLAB_DATA", {});
+}
+
+function getAssetsManifestData() {
+  return loadJsonWithFallback("./data/assets-manifest.json", "ASSETS_MANIFEST", { works: [] });
 }

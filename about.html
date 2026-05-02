@@ -3,88 +3,97 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>关于我 · Shanhe Atelier</title>
-    <meta name="description" content="个人创作者介绍、工作方法、合作范围与交付方式。">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <title>关于 · Synthetic Atelier</title>
+    <meta name="description" content="Synthetic Atelier / 合成景观档案的创作者介绍、工具栈和擅长方向。">
     <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
     <div class="site-shell">
-      <header class="topbar">
-        <div class="container topbar-inner">
-          <a class="brand" href="index.html">
-            <span class="brand-mark parallax"></span>
-            <span>Shanhe Atelier</span>
+      <header class="topbar" id="topbar">
+        <div class="topbar-inner">
+          <a class="brand" href="index.html" aria-label="Synthetic Atelier 首页">
+            <span class="brand-mark" aria-hidden="true"></span>
+            <span><strong>Synthetic Atelier</strong><small>合成景观档案</small></span>
           </a>
-          <button class="menu-toggle" aria-label="展开菜单" aria-expanded="false">☰</button>
-          <nav class="nav">
+          <button class="menu-toggle" id="menuToggle" aria-label="展开菜单" aria-expanded="false" aria-controls="nav">
+            <span></span><span></span><span></span>
+          </button>
+          <nav class="nav" id="nav" aria-label="主导航">
             <a href="index.html">首页</a>
-            <a href="works.html">作品</a>
-            <a href="collaboration.html">协同</a>
-            <a href="about.html">关于</a>
-            <a href="contact.html">联系</a>
+              <a href="works.html">作品</a>
+              <a href="collaboration.html">方法论</a>
+              <a href="about.html" aria-current="page" class="is-active">关于</a>
+              <a href="contact.html">合作</a>
           </nav>
         </div>
       </header>
 
-      <main>
-        <section class="hero">
-          <div class="container">
-            <span class="eyebrow reveal">About The Maker</span>
-            <h1 class="reveal">把创意、执行与传播连接成同一条产线</h1>
-            <p class="reveal">
-              我专注于图文、平面与摄影方向的创作表达，擅长把抽象想法转译为可发布的视觉资产。
-              在项目推进上，我采用“人类判断 + AI 协同”的方式，提升产出速度和复用效率。
-            </p>
+      <main id="main">
+        <section class="page-hero about-hero">
+          <div class="container narrow">
+            <p class="eyebrow">About</p>
+            <h1>我用 AI 生成建立概念世界，也把过程整理成可以交付的作品档案。</h1>
+            <p>这个站点是一个个人 AI 视觉创作主页。它面向需要独特视觉方向、概念提案、内容栏目和早期世界观探索的合作方。</p>
           </div>
         </section>
 
         <section class="section">
-          <div class="container grid-2">
-            <article class="card reveal">
-              <h3>工作方法</h3>
-              <p>先定义目标，再拆解任务，再做门禁评审。创作不是灵感碰运气，而是结构化推进。</p>
-            </article>
-            <article class="card reveal">
-              <h3>合作形态</h3>
-              <p>支持品牌视觉方案、内容栏目包装、活动主视觉、社媒传播素材等项目合作。</p>
-            </article>
+          <div class="container two-column">
+            <div>
+              <p class="eyebrow">Profile</p>
+              <h2>创作定位</h2>
+              <p>我关注 AI 图像生成如何从“惊喜样张”进入“可说明、可筛选、可复用”的创作流程。作品通常从一个清晰的世界观设定开始，再通过提示词矩阵、视觉筛选和档案化表达完成。</p>
+              <p>我擅长把抽象主题转译成有记忆点的视觉系统：可以是虚构城市、未来生态、材质趋势、品牌概念，也可以是需要快速验证方向的早期提案。</p>
+            </div>
+            <div class="profile-card">
+              <h3>擅长方向</h3>
+              <ul class="check-list static">
+                <li>AI 视觉概念与系列化封面</li>
+                <li>世界观设定与场景气质探索</li>
+                <li>提示词策略、失败样本筛选与迭代记录</li>
+                <li>作品集页面、项目说明和可维护内容结构</li>
+              </ul>
+            </div>
           </div>
         </section>
 
         <section class="section">
           <div class="container">
-            <div class="section-title reveal">
-              <h2>工具与流程栈</h2>
+            <div class="section-header">
+              <div>
+                <p class="eyebrow">Tool Stack</p>
+                <h2>工具栈</h2>
+              </div>
             </div>
-            <div class="grid-3">
-              <article class="card reveal">
-                <h3>创意设计</h3>
-                <p>Figma、Photoshop、Lightroom，用于视觉概念构建与风格统一。</p>
-              </article>
-              <article class="card reveal">
-                <h3>协同开发</h3>
-                <p>Codex + Claude Code，完成页面实现、审查回路和交付文档自动化。</p>
-              </article>
-              <article class="card reveal">
-                <h3>内容发布</h3>
-                <p>面向小红书/抖音/视频号产出可剪辑素材包，缩短从创作到分发的路径。</p>
-              </article>
+            <div class="capability-grid">
+              <article class="capability-card"><h3>生成与方向</h3><p>提示词矩阵、图像模型、参考板、风格约束、系列筛选。</p></article>
+              <article class="capability-card"><h3>整理与编辑</h3><p>SVG 草图、色彩系统、封面/详情图结构、alt 文本与说明文案。</p></article>
+              <article class="capability-card"><h3>网页与归档</h3><p>HTML、CSS、原生 JS、JSON 数据、file:// fallback 与可维护内容结构。</p></article>
             </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container cta-panel">
+            <p class="eyebrow">Good Fit</p>
+            <h2>如果你的项目还在“需要一个独特视觉方向”的阶段，这套方法最有价值。</h2>
+            <a class="btn btn-primary" href="contact.html">查看合作方式</a>
           </div>
         </section>
       </main>
 
       <footer class="footer">
         <div class="container footer-inner">
-          <p>© <span class="current-year"></span> Shanhe Atelier</p>
-          <p>Crafted for Demo and Real Delivery</p>
+          <p>© <span class="current-year"></span> Synthetic Atelier / 合成景观档案</p>
+          <p>AI visual portfolio · HTML / CSS / JS / JSON</p>
         </div>
       </footer>
     </div>
 
+    <script src="./safe-dom.js"></script>
+    <script src="./data-loader.js"></script>
     <script src="./script.js"></script>
+
   </body>
 </html>

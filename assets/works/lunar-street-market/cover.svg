@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Lunar Street Market</title>
+  <desc id="desc">月面基地旁的夜市摊位发出暖光，远处能看到地球弧光。</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f1020"/>
+      <stop offset="0.56" stop-color="#2d3148"/>
+      <stop offset="1" stop-color="#df5b45"/>
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#b9d9ff" stroke-opacity=".12" stroke-width="1"/>
+    </pattern>
+    <filter id="soft">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="760" fill="url(#sky)"/>
+  <rect width="1200" height="760" fill="url(#grid)" opacity=".65"/>
+  <circle cx="275" cy="130" r="125" fill="#ffc36b" opacity=".16" filter="url(#soft)"/>
+  <circle cx="870" cy="180" r="130" fill="#b9d9ff" opacity=".14" filter="url(#soft)"/>
+  <path d="M0 180 C 160 100, 250 300, 420 190 S 720 110, 900 200 S 1090 300, 1200 220 V760 H0Z" fill="#2d3148" opacity=".72"/>
+  <path d="M0 355 C 130 275, 280 390, 430 300 S 720 250, 860 330 S 1070 430, 1200 340 V760 H0Z" fill="#0f1020" opacity=".78"/>
+  <g fill="none" stroke="#ffc36b" stroke-width="3" stroke-linecap="round" opacity=".82">
+    <path d="M170 500 C280 345, 370 560, 510 430 S720 365, 840 450 S990 610, 1080 455"/>
+    <path d="M120 360 L320 340 L520 350 L710 260 L960 310"/>
+    <path d="M230 610 L410 530 L600 590 L790 510 L1010 530"/>
+  </g>
+  <g fill="#ffc36b" stroke="#b9d9ff" stroke-opacity=".8" stroke-width="2">
+    <circle cx="170" cy="500" r="10"/>
+    <circle cx="320" cy="340" r="8"/>
+    <circle cx="510" cy="430" r="12"/>
+    <circle cx="710" cy="260" r="9"/>
+    <circle cx="840" cy="450" r="11"/>
+    <circle cx="1010" cy="530" r="8"/>
+  </g>
+  <g opacity=".9">
+    <rect x="76" y="74" width="320" height="88" rx="6" fill="#0f1020" fill-opacity=".72" stroke="#b9d9ff" stroke-opacity=".22"/>
+    <text x="100" y="116" fill="#b9d9ff" font-family="Arial, sans-serif" font-size="22" letter-spacing="2">Lunar Street Market</text>
+    <text x="100" y="146" fill="#ffc36b" font-family="Arial, sans-serif" font-size="18">月面夜市</text>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="14" fill="#b9d9ff" opacity=".78">
+    <text x="940" y="650">ARCHIVE 05</text>
+    <text x="940" y="678">2025 / AI 视觉创作</text>
+  </g>
+</svg>

@@ -3,84 +3,91 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>联系合作 · Shanhe Atelier</title>
-    <meta name="description" content="联系我进行创作合作、品牌视觉项目与内容共创。">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <title>合作联系 · Synthetic Atelier</title>
+    <meta name="description" content="联系 Synthetic Atelier，讨论 AI 视觉创作、概念世界观、作品档案和提示词流程项目。">
     <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
     <div class="site-shell">
-      <header class="topbar">
-        <div class="container topbar-inner">
-          <a class="brand" href="index.html">
-            <span class="brand-mark parallax"></span>
-            <span>Shanhe Atelier</span>
+      <header class="topbar" id="topbar">
+        <div class="topbar-inner">
+          <a class="brand" href="index.html" aria-label="Synthetic Atelier 首页">
+            <span class="brand-mark" aria-hidden="true"></span>
+            <span><strong>Synthetic Atelier</strong><small>合成景观档案</small></span>
           </a>
-          <button class="menu-toggle" aria-label="展开菜单" aria-expanded="false">☰</button>
-          <nav class="nav">
+          <button class="menu-toggle" id="menuToggle" aria-label="展开菜单" aria-expanded="false" aria-controls="nav">
+            <span></span><span></span><span></span>
+          </button>
+          <nav class="nav" id="nav" aria-label="主导航">
             <a href="index.html">首页</a>
-            <a href="works.html">作品</a>
-            <a href="collaboration.html">协同</a>
-            <a href="about.html">关于</a>
-            <a href="contact.html">联系</a>
+              <a href="works.html">作品</a>
+              <a href="collaboration.html">方法论</a>
+              <a href="about.html">关于</a>
+              <a href="contact.html" aria-current="page" class="is-active">合作</a>
           </nav>
         </div>
       </header>
 
-      <main>
-        <section class="hero">
-          <div class="container">
-            <span class="eyebrow reveal">Let us Build Something Memorable</span>
-            <h1 class="reveal">欢迎发起合作</h1>
-            <p class="reveal">如果你正在寻找兼顾创意表达和交付效率的合作伙伴，我们可以从一个小而明确的目标开始。</p>
+      <main id="main">
+        <section class="page-hero contact-hero">
+          <div class="container narrow">
+            <p class="eyebrow">Commission</p>
+            <h1>合作联系</h1>
+            <p>欢迎带着一个主题、一次发布、一组概念或一个还不够清晰的视觉问题来聊。我会先帮你把方向收束成可判断的创作 brief。</p>
           </div>
         </section>
 
         <section class="section">
-          <div class="container grid-3">
-            <article class="card reveal">
-              <h3>邮箱</h3>
-              <p><a href="mailto:hello@shanheatelier.com">hello@shanheatelier.com</a></p>
-            </article>
-            <article class="card reveal">
-              <h3>微信</h3>
-              <p>ShanheStudio</p>
-            </article>
-            <article class="card reveal">
-              <h3>城市</h3>
-              <p>Shanghai / Remote</p>
-            </article>
+          <div class="container two-column">
+            <div>
+              <p class="eyebrow">Project Types</p>
+              <h2>适合合作的项目</h2>
+              <ul class="check-list static">
+                <li>品牌或个人项目的 AI 视觉概念提案</li>
+                <li>展览、音乐、空间、出版物的世界观视觉</li>
+                <li>社媒栏目、封面系列或内容档案视觉系统</li>
+                <li>早期创意验证：从关键词到可展示方向图</li>
+              </ul>
+            </div>
+            <aside class="contact-panel" aria-label="联系方式">
+              <h2>发起合作</h2>
+              <p>邮件中可以附上主题、用途、时间节点、参考方向和预算范围。没有完整 brief 也没关系，我可以先从问题定义开始。</p>
+              <a class="btn btn-primary" href="mailto:hello@synthetic-atelier.example?subject=Synthetic%20Atelier%20合作咨询">hello@synthetic-atelier.example</a>
+              <p class="fineprint">示例邮箱用于作品集演示；上线前请替换为真实联系方式。</p>
+            </aside>
           </div>
         </section>
 
-        <section class="section" style="padding-top:0;">
+        <section class="section">
           <div class="container">
-            <article class="card reveal">
-              <h3>合作需求模板</h3>
-              <p class="muted">你可以直接复制以下结构发我，通常 24 小时内会回复。</p>
-              <div class="detail-story" style="margin-top:0.9rem;">
-项目背景：
-目标受众：
-希望上线时间：
-参考风格：
-预算区间：
-是否需要短视频素材联动：
+            <div class="section-header">
+              <div>
+                <p class="eyebrow">Before We Start</p>
+                <h2>我会优先确认这 4 件事</h2>
               </div>
-            </article>
+            </div>
+            <div class="capability-grid">
+              <article class="capability-card"><h3>目标</h3><p>它是用于提案、传播、展览、产品包装，还是仅用于方向探索。</p></article>
+              <article class="capability-card"><h3>边界</h3><p>哪些视觉不能出现，哪些品牌、人物、风格或题材需要避开。</p></article>
+              <article class="capability-card"><h3>交付</h3><p>需要封面、系列图、提示词记录、网页归档，还是可继续生成的方向包。</p></article>
+              <article class="capability-card"><h3>节奏</h3><p>确认轮次、反馈方式、截止时间和最终上线格式。</p></article>
+            </div>
           </div>
         </section>
       </main>
 
       <footer class="footer">
         <div class="container footer-inner">
-          <p>© <span class="current-year"></span> Shanhe Atelier</p>
-          <p>Open for Creative Collaboration</p>
+          <p>© <span class="current-year"></span> Synthetic Atelier / 合成景观档案</p>
+          <p>AI visual portfolio · HTML / CSS / JS / JSON</p>
         </div>
       </footer>
     </div>
 
+    <script src="./safe-dom.js"></script>
+    <script src="./data-loader.js"></script>
     <script src="./script.js"></script>
+
   </body>
 </html>

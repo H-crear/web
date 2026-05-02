@@ -3,87 +3,81 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>协同工作流 · Shanhe Atelier</title>
-    <meta name="description" content="展示 Codex 与 Claude Code 协同开发项目的分工、流程、门禁与里程碑。">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <title>创作流程 / Methodology · Synthetic Atelier</title>
+    <meta name="description" content="Synthetic Atelier 的 AI 视觉创作流程，说明从概念、提示词、迭代到归档交付的方法。">
     <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
     <div class="site-shell">
-      <header class="topbar">
-        <div class="container topbar-inner">
-          <a class="brand" href="index.html">
-            <span class="brand-mark parallax"></span>
-            <span>Shanhe Atelier</span>
+      <header class="topbar" id="topbar">
+        <div class="topbar-inner">
+          <a class="brand" href="index.html" aria-label="Synthetic Atelier 首页">
+            <span class="brand-mark" aria-hidden="true"></span>
+            <span><strong>Synthetic Atelier</strong><small>合成景观档案</small></span>
           </a>
-          <button class="menu-toggle" aria-label="展开菜单" aria-expanded="false">☰</button>
-          <nav class="nav">
+          <button class="menu-toggle" id="menuToggle" aria-label="展开菜单" aria-expanded="false" aria-controls="nav">
+            <span></span><span></span><span></span>
+          </button>
+          <nav class="nav" id="nav" aria-label="主导航">
             <a href="index.html">首页</a>
-            <a href="works.html">作品</a>
-            <a href="collaboration.html">协同</a>
-            <a href="about.html">关于</a>
-            <a href="contact.html">联系</a>
+              <a href="works.html">作品</a>
+              <a href="collaboration.html" aria-current="page" class="is-active">方法论</a>
+              <a href="about.html">关于</a>
+              <a href="contact.html">合作</a>
           </nav>
         </div>
       </header>
 
-      <main>
-        <section class="hero">
-          <div class="container">
-            <span class="eyebrow reveal">Codex × Claude Code Workflow</span>
-            <h1 class="reveal">从目标到交付，把协同过程可视化</h1>
-            <p class="reveal">这一页把协同做成“可以展示的产品能力”：谁做什么、如何审查、哪里验收、如何冻结版本。</p>
-          </div>
-        </section>
-
-        <section class="section" style="padding-top:1rem;">
-          <div class="container">
-            <div class="section-title reveal">
-              <h2>核心指标</h2>
-            </div>
-            <div id="kpi-row" class="kpi-row"></div>
-          </div>
-        </section>
-
-        <section class="section">
-          <div class="container grid-2">
-            <div>
-              <div class="section-title reveal">
-                <h2>协同时间线</h2>
-                <p>按阶段拆分输入、输出与质量门禁，避免“看起来很忙但无法复用”。</p>
-              </div>
-              <div class="timeline" id="collab-steps"></div>
-            </div>
-            <div>
-              <div class="section-title reveal">
-                <h2>里程碑与交付证据</h2>
-                <p>每一步都产出明确工件，保证随时可展示、可交接、可复盘。</p>
-              </div>
-              <div id="milestone-list" class="grid-1"></div>
-            </div>
+      <main id="main">
+        <section class="page-hero">
+          <div class="container narrow">
+            <p class="eyebrow">Methodology</p>
+            <h1>创作流程</h1>
+            <p>我把 AI 视觉项目拆成可讨论、可复盘、可交付的四个阶段。重点不是展示“我会生成图”，而是展示如何稳定做出有方向的视觉系统。</p>
           </div>
         </section>
 
         <section class="section">
           <div class="container">
-            <div class="section-title reveal">
-              <h2>质量门禁规则</h2>
+            <div id="methodKpis" class="kpi-row"></div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container method-layout">
+            <div>
+              <p class="eyebrow">Principles</p>
+              <h2>三个创作原则</h2>
+              <p class="muted">这些原则用于判断一个 AI 视觉项目是否只是好看，还是已经具备作品集与商业沟通价值。</p>
             </div>
-            <div class="grid-3">
-              <article class="card reveal">
-                <h3>需求符合性</h3>
-                <p>先确认“做的是对的东西”，再讨论代码是否优雅，避免优化错误方向。</p>
-              </article>
-              <article class="card reveal">
-                <h3>代码质量</h3>
-                <p>覆盖结构可读性、异常处理、可维护性和性能边界，减少后续返工。</p>
-              </article>
-              <article class="card reveal">
-                <h3>展示可用性</h3>
-                <p>以演示链路能否连续跑通作为最终标准，杜绝“只在开发机可用”。</p>
-              </article>
+            <div id="methodPrinciples" class="stack-list"></div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container">
+            <div class="section-header">
+              <div>
+                <p class="eyebrow">Workflow</p>
+                <h2>四阶段工作流</h2>
+              </div>
+            </div>
+            <div id="methodSteps" class="timeline"></div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container two-column">
+            <div>
+              <p class="eyebrow">Deliverables</p>
+              <h2>可交付内容</h2>
+              <ul id="methodDeliverables" class="check-list"></ul>
+            </div>
+            <div>
+              <p class="eyebrow">Stack</p>
+              <h2>工具栈</h2>
+              <div id="methodStack" class="tag-cloud"></div>
             </div>
           </div>
         </section>
@@ -91,15 +85,16 @@
 
       <footer class="footer">
         <div class="container footer-inner">
-          <p>© <span class="current-year"></span> Shanhe Atelier</p>
-          <p>Collaboration Evidence Board</p>
+          <p>© <span class="current-year"></span> Synthetic Atelier / 合成景观档案</p>
+          <p>AI visual portfolio · HTML / CSS / JS / JSON</p>
         </div>
       </footer>
     </div>
 
-    <script src="./data/collaboration-data.js"></script>
+    <script src="./safe-dom.js"></script>
     <script src="./data-loader.js"></script>
     <script src="./script.js"></script>
+    <script src="./data/collaboration-data.js"></script>
     <script src="./collaboration.js"></script>
   </body>
 </html>

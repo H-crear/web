@@ -1,74 +1,63 @@
-function renderSteps(steps) {
-  const host = document.querySelector("#collab-steps");
+function renderKpis(data) {
+  const host = document.querySelector("#methodKpis");
   if (!host) return;
-
-  host.innerHTML = steps
-    .map(
-      (step, index) => `
-      <article class="timeline-item reveal">
-        <p class="eyebrow">阶段 ${index + 1} · ${step.phase}</p>
-        <h3>${step.owner}</h3>
-        <p><strong>输入：</strong>${step.input}</p>
-        <p><strong>输出：</strong>${step.output}</p>
-        <p><strong>质量门禁：</strong>${step.qualityGate}</p>
-        <p><strong>证据：</strong>${step.evidence}</p>
-      </article>
-    `
-    )
-    .join("");
+  window.SafeDOM.clear(host);
+  (data.kpis || []).forEach((item) => {
+    host.appendChild(window.SafeDOM.el("div", { className: "kpi" }, [
+      window.SafeDOM.el("strong", { text: item.value }),
+      window.SafeDOM.el("span", { text: item.label })
+    ]));
+  });
 }
 
-function renderMilestones(milestones) {
-  const host = document.querySelector("#milestone-list");
+function renderPrinciples(data) {
+  const host = document.querySelector("#methodPrinciples");
   if (!host) return;
-
-  host.innerHTML = milestones
-    .map(
-      (item) => `
-      <article class="card reveal">
-        <p class="eyebrow">${item.date}</p>
-        <h3>${item.name}</h3>
-        <p>${item.status}</p>
-        <p class="muted" style="margin-top:0.5rem;">交付物：${item.artifactLink}</p>
-      </article>
-    `
-    )
-    .join("");
+  window.SafeDOM.clear(host);
+  (data.principles || []).forEach((item) => {
+    host.appendChild(window.SafeDOM.el("article", { className: "stack-item" }, [
+      window.SafeDOM.el("h3", { text: item.title }),
+      window.SafeDOM.el("p", { text: item.text })
+    ]));
+  });
 }
 
-function renderKpi(kpis) {
-  const host = document.querySelector("#kpi-row");
+function renderSteps(data) {
+  const host = document.querySelector("#methodSteps");
   if (!host) return;
-
-  host.innerHTML = kpis
-    .map(
-      (item) => `
-      <div class="kpi reveal">
-        <strong>${item.value}</strong>
-        <span class="muted">${item.label}</span>
-      </div>
-    `
-    )
-    .join("");
+  window.SafeDOM.clear(host);
+  (data.steps || []).forEach((step) => {
+    host.appendChild(window.SafeDOM.el("article", { className: "timeline-item is-visible" }, [
+      window.SafeDOM.el("p", { className: "eyebrow", text: step.phase }),
+      window.SafeDOM.el("h3", { text: step.title }),
+      window.SafeDOM.el("dl", { className: "method-dl" }, [
+        window.SafeDOM.el("div", {}, [window.SafeDOM.el("dt", { text: "输入" }), window.SafeDOM.el("dd", { text: step.input })]),
+        window.SafeDOM.el("div", {}, [window.SafeDOM.el("dt", { text: "输出" }), window.SafeDOM.el("dd", { text: step.output })]),
+        window.SafeDOM.el("div", {}, [window.SafeDOM.el("dt", { text: "验收" }), window.SafeDOM.el("dd", { text: step.qualityGate })])
+      ])
+    ]));
+  });
 }
 
-async function initCollaborationPage() {
-  try {
-    const data = await getCollaborationData();
-    renderSteps(data.steps || []);
-    renderMilestones(data.milestones || []);
-    renderKpi(data.kpis || []);
-
-    if (typeof setupReveals === "function") {
-      setupReveals();
-    }
-  } catch (error) {
-    const host = document.querySelector("#collab-steps");
-    if (host) {
-      host.innerHTML = `<div class="empty-state">协同流程数据加载失败，请检查 data/collaboration.json 或 data/collaboration-data.js。</div>`;
-    }
-    console.error(error);
+function renderLists(data) {
+  const deliverables = document.querySelector("#methodDeliverables");
+  const stack = document.querySelector("#methodStack");
+  if (deliverables) {
+    window.SafeDOM.clear(deliverables);
+    (data.deliverables || []).forEach((item) => deliverables.appendChild(window.SafeDOM.el("li", { text: item })));
+  }
+  if (stack) {
+    window.SafeDOM.clear(stack);
+    (data.stack || []).forEach((item) => stack.appendChild(window.SafeDOM.el("span", { className: "tag", text: item })));
   }
 }
 
-initCollaborationPage();
+async function initCollaborationPage() {
+  const data = await getCollaborationData();
+  renderKpis(data);
+  renderPrinciples(data);
+  renderSteps(data);
+  renderLists(data);
+}
+
+document.addEventListener("DOMContentLoaded", initCollaborationPage);
