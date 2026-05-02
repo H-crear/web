@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - feat/ai-portfolio-refresh
   workflow_dispatch:
 
 permissions:
@@ -11,12 +12,8 @@ permissions:
   pages: write
   id-token: write
 
-concurrency:
-  group: pages
-  cancel-in-progress: false
-
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: 检出代码
@@ -28,8 +25,7 @@ jobs:
       - name: 上传 artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./
+          path: .
 
       - name: 部署到 GitHub Pages
-        id: deployment
         uses: actions/deploy-pages@v4
