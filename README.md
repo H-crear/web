@@ -32,6 +32,7 @@
 
 ```text
 assets/works/<work-id>/
+├── cover.webp
 ├── cover.png
 ├── detail-1.svg
 └── detail-2.svg
@@ -39,10 +40,18 @@ assets/works/<work-id>/
 
 更新作品时至少填写：标题、分类、年份、摘要、标签、`style`、`medium`、`mood`、`useCase`、`coverType`、项目背景、提示词思路、迭代过程、结果说明、图片 alt、元信息中的 credits 和 license。
 
+新增或替换 `cover.png` 后，运行图片优化脚本生成 WebP 并同步尺寸：
+
+```powershell
+node scripts\optimize-images.js
+```
+
+脚本会保留 PNG 原图，生成 `cover.webp`，并把 `data/works.json` / `data/works-data.js` / `data/assets-manifest.json` / `data/assets-manifest-data.js` 同步到 WebP 优先、PNG fallback 的结构。
+
 ## 验证
 
 ```powershell
 node scripts/validate-site.js
 ```
 
-验证脚本会检查 12 个作品项目、必填字段、PNG 封面、详情图、资产清单和 JSON fallback 同步。
+验证脚本会检查 12 个作品项目、必填字段、WebP + PNG fallback、图片尺寸、详情图、资产清单、JSON fallback 和分享 meta。

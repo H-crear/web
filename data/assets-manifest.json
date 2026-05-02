@@ -2,10 +2,13 @@
   "works": [
     {
       "id": "midnight-atlas",
-      "coverType": "raster PNG",
+      "coverType": "raster WebP + PNG fallback",
       "medium": "概念城市",
       "style": "电影感夜景",
-      "cover": "./assets/works/midnight-atlas/cover.png",
+      "cover": "./assets/works/midnight-atlas/cover.webp",
+      "fallbackCover": "./assets/works/midnight-atlas/cover.png",
+      "width": 1400,
+      "height": 900,
       "details": [
         "./assets/works/midnight-atlas/detail-1.svg",
         "./assets/works/midnight-atlas/detail-2.svg"
@@ -18,10 +21,13 @@
     },
     {
       "id": "porcelain-clouds",
-      "coverType": "raster PNG",
+      "coverType": "raster WebP + PNG fallback",
       "medium": "产品静物",
       "style": "东方静物",
-      "cover": "./assets/works/porcelain-clouds/cover.png",
+      "cover": "./assets/works/porcelain-clouds/cover.webp",
+      "fallbackCover": "./assets/works/porcelain-clouds/cover.png",
+      "width": 1400,
+      "height": 900,
       "details": [
         "./assets/works/porcelain-clouds/detail-1.svg",
         "./assets/works/porcelain-clouds/detail-2.svg"
@@ -34,10 +40,13 @@
     },
     {
       "id": "memory-reef",
-      "coverType": "raster PNG",
+      "coverType": "raster WebP + PNG fallback",
       "medium": "幻想场景",
       "style": "生态科幻",
-      "cover": "./assets/works/memory-reef/cover.png",
+      "cover": "./assets/works/memory-reef/cover.webp",
+      "fallbackCover": "./assets/works/memory-reef/cover.png",
+      "width": 1400,
+      "height": 900,
       "details": [
         "./assets/works/memory-reef/detail-1.svg",
         "./assets/works/memory-reef/detail-2.svg"
@@ -50,10 +59,13 @@
     },
     {
       "id": "neon-herbarium",
-      "coverType": "raster PNG",
+      "coverType": "raster WebP + PNG fallback",
       "medium": "插画图鉴",
       "style": "霓虹图谱",
-      "cover": "./assets/works/neon-herbarium/cover.png",
+      "cover": "./assets/works/neon-herbarium/cover.webp",
+      "fallbackCover": "./assets/works/neon-herbarium/cover.png",
+      "width": 1400,
+      "height": 900,
       "details": [
         "./assets/works/neon-herbarium/detail-1.svg",
         "./assets/works/neon-herbarium/detail-2.svg"
@@ -66,10 +78,13 @@
     },
     {
       "id": "lunar-street-market",
-      "coverType": "raster PNG",
+      "coverType": "raster WebP + PNG fallback",
       "medium": "场景设计",
       "style": "生活科幻",
-      "cover": "./assets/works/lunar-street-market/cover.png",
+      "cover": "./assets/works/lunar-street-market/cover.webp",
+      "fallbackCover": "./assets/works/lunar-street-market/cover.png",
+      "width": 1400,
+      "height": 900,
       "details": [
         "./assets/works/lunar-street-market/detail-1.svg",
         "./assets/works/lunar-street-market/detail-2.svg"
@@ -82,10 +97,13 @@
     },
     {
       "id": "glass-monsoon",
-      "coverType": "raster PNG",
+      "coverType": "raster WebP + PNG fallback",
       "medium": "建筑视觉",
       "style": "建筑材质",
-      "cover": "./assets/works/glass-monsoon/cover.png",
+      "cover": "./assets/works/glass-monsoon/cover.webp",
+      "fallbackCover": "./assets/works/glass-monsoon/cover.png",
+      "width": 1400,
+      "height": 900,
       "details": [
         "./assets/works/glass-monsoon/detail-1.svg",
         "./assets/works/glass-monsoon/detail-2.svg"
@@ -98,10 +116,13 @@
     },
     {
       "id": "satellite-garden",
-      "coverType": "raster PNG",
+      "coverType": "raster WebP + PNG fallback",
       "medium": "系统景观",
       "style": "可持续未来",
-      "cover": "./assets/works/satellite-garden/cover.png",
+      "cover": "./assets/works/satellite-garden/cover.webp",
+      "fallbackCover": "./assets/works/satellite-garden/cover.png",
+      "width": 1400,
+      "height": 900,
       "details": [
         "./assets/works/satellite-garden/detail-1.svg",
         "./assets/works/satellite-garden/detail-2.svg"
@@ -114,10 +135,13 @@
     },
     {
       "id": "desert-signal-library",
-      "coverType": "raster PNG",
+      "coverType": "raster WebP + PNG fallback",
       "medium": "概念建筑",
       "style": "荒漠档案",
-      "cover": "./assets/works/desert-signal-library/cover.png",
+      "cover": "./assets/works/desert-signal-library/cover.webp",
+      "fallbackCover": "./assets/works/desert-signal-library/cover.png",
+      "width": 1400,
+      "height": 900,
       "details": [
         "./assets/works/desert-signal-library/detail-1.svg",
         "./assets/works/desert-signal-library/detail-2.svg"
@@ -130,10 +154,13 @@
     },
     {
       "id": "synthetic-portrait-studio",
-      "coverType": "raster PNG",
+      "coverType": "raster WebP + PNG fallback",
       "medium": "AI 人像",
       "style": "编辑部肖像",
-      "cover": "./assets/works/synthetic-portrait-studio/cover.png",
+      "cover": "./assets/works/synthetic-portrait-studio/cover.webp",
+      "fallbackCover": "./assets/works/synthetic-portrait-studio/cover.png",
+      "width": 1586,
+      "height": 992,
       "details": [
         "./assets/works/synthetic-portrait-studio/detail-1.svg",
         "./assets/works/synthetic-portrait-studio/detail-2.svg"
@@ -146,10 +173,13 @@
     },
     {
       "id": "hyperreal-product-lab",
-      "coverType": "raster PNG",
+      "coverType": "raster WebP + PNG fallback",
       "medium": "产品视觉",
       "style": "超写实广告",
-      "cover": "./assets/works/hyperreal-product-lab/cover.png",
+      "cover": "./assets/works/hyperreal-product-lab/cover.webp",
+      "fallbackCover": "./assets/works/hyperreal-product-lab/cover.png",
+      "width": 1586,
+      "height": 992,
       "details": [
         "./assets/works/hyperreal-product-lab/detail-1.svg",
         "./assets/works/hyperreal-product-lab/detail-2.svg"
@@ -162,10 +192,13 @@
     },
     {
       "id": "quiet-architecture-interior",
-      "coverType": "raster PNG",
+      "coverType": "raster WebP + PNG fallback",
       "medium": "建筑室内",
       "style": "极简建筑摄影",
-      "cover": "./assets/works/quiet-architecture-interior/cover.png",
+      "cover": "./assets/works/quiet-architecture-interior/cover.webp",
+      "fallbackCover": "./assets/works/quiet-architecture-interior/cover.png",
+      "width": 1587,
+      "height": 991,
       "details": [
         "./assets/works/quiet-architecture-interior/detail-1.svg",
         "./assets/works/quiet-architecture-interior/detail-2.svg"
@@ -178,10 +211,13 @@
     },
     {
       "id": "collage-dream-engine",
-      "coverType": "raster PNG",
+      "coverType": "raster WebP + PNG fallback",
       "medium": "抽象海报",
       "style": "实验拼贴",
-      "cover": "./assets/works/collage-dream-engine/cover.png",
+      "cover": "./assets/works/collage-dream-engine/cover.webp",
+      "fallbackCover": "./assets/works/collage-dream-engine/cover.png",
+      "width": 1586,
+      "height": 992,
       "details": [
         "./assets/works/collage-dream-engine/detail-1.svg",
         "./assets/works/collage-dream-engine/detail-2.svg"

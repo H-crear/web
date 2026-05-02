@@ -18,7 +18,8 @@ function renderWork(host, work, works) {
   document.title = work.title + " " + work.titleEn + " · Synthetic Atelier";
   const metaDescription = document.querySelector('meta[name="description"]');
   if (metaDescription) metaDescription.setAttribute("content", work.excerpt);
-  const gallery = D.el("div", { className: "detail-gallery" }, [D.el("figure", { className: "detail-cover" }, [D.el("img", { src: work.cover.src, alt: work.cover.alt }), D.el("figcaption", { text: work.cover.alt })]), ...(work.detailImages || []).map((image) => D.el("figure", {}, [D.el("img", { src: image.src, alt: image.alt }), D.el("figcaption", { text: image.caption })]))]);
+  updateSocialMeta(work);
+  const gallery = D.el("div", { className: "detail-gallery" }, [D.el("figure", { className: "detail-cover" }, [D.image({ src: work.cover.src, fallbackSrc: work.cover.fallbackSrc, alt: work.cover.alt, width: work.cover.width, height: work.cover.height, loading: "eager", decoding: "async" }), D.el("figcaption", { text: work.cover.alt })]), ...(work.detailImages || []).map((image) => D.el("figure", {}, [D.image({ src: image.src, alt: image.alt, loading: "lazy", decoding: "async" }), D.el("figcaption", { text: image.caption })]))]);
   const iterationList = D.el("ol", { className: "process-list detail-process" }, (work.iterations || []).map((item, index) => D.el("li", {}, [D.el("span", { text: String(index + 1).padStart(2, "0") }), D.el("strong", { text: item.title }), D.el("p", { text: item.text })])));
   const metaList = D.el("dl", { className: "meta-list" }, [
     D.el("div", {}, [D.el("dt", { text: "图片类型" }), D.el("dd", { text: work.medium })]),
@@ -29,10 +30,39 @@ function renderWork(host, work, works) {
     D.el("div", {}, [D.el("dt", { text: "授权" }), D.el("dd", { text: work.meta.license })])
   ]);
   host.appendChild(D.fragment([
-    D.el("section", { className: "work-hero" }, [D.el("div", { className: "container work-hero-grid" }, [D.el("div", {}, [D.el("a", { className: "text-link", href: "works.html", text: "返回作品总览" }), D.el("p", { className: "eyebrow", text: work.medium + " / " + work.year }), D.el("h1", { text: work.title }), D.el("p", { className: "title-en", text: work.titleEn }), D.el("p", { className: "hero-tagline", text: work.excerpt }), D.el("div", { className: "meta-strip" }, [D.el("span", { text: work.style }), D.el("span", { text: work.mood }), D.el("span", { text: work.useCase })]), D.el("div", { className: "tag-row" }, (work.tags || []).map((tag) => D.el("span", { className: "tag", text: tag }))) ]), D.el("img", { className: "work-hero-image", src: work.cover.src, alt: work.cover.alt })])]),
+    D.el("section", { className: "work-hero" }, [D.el("div", { className: "container work-hero-grid" }, [D.el("div", {}, [D.el("a", { className: "text-link", href: "works.html", text: "返回作品总览" }), D.el("p", { className: "eyebrow", text: work.medium + " / " + work.year }), D.el("h1", { text: work.title }), D.el("p", { className: "title-en", text: work.titleEn }), D.el("p", { className: "hero-tagline", text: work.excerpt }), D.el("p", { className: "use-case use-case-hero", text: "适合：" + work.useCase }), D.el("div", { className: "meta-strip" }, [D.el("span", { text: work.style }), D.el("span", { text: work.mood }), D.el("span", { text: work.coverType })]), D.el("div", { className: "tag-row" }, (work.tags || []).map((tag) => D.el("span", { className: "tag", text: tag }))) ]), D.image({ className: "work-hero-image", src: work.cover.src, fallbackSrc: work.cover.fallbackSrc, alt: work.cover.alt, width: work.cover.width, height: work.cover.height, loading: "eager", decoding: "async" })])]),
     D.el("section", { className: "section" }, [D.el("div", { className: "container detail-layout" }, [D.el("div", { className: "detail-main" }, [detailSection("项目背景", work.background), detailSection("提示词思路", work.promptApproach), detailSection("应用场景", work.useCase), D.el("section", { className: "detail-block" }, [D.el("h2", { text: "迭代过程" }), iterationList]), detailSection("结果说明", work.result), D.el("section", { className: "detail-block" }, [D.el("h2", { text: "作品图像" }), gallery])]), D.el("aside", { className: "detail-aside" }, [D.el("h2", { text: "图片元信息" }), metaList])])]),
     D.el("section", { className: "section" }, [D.el("div", { className: "container" }, [neighborLinks(works, work)])])
   ]));
+}
+
+function ensureMeta(selector, attrs) {
+  let node = document.head.querySelector(selector);
+  if (!node) {
+    node = document.createElement("meta");
+    Object.entries(attrs).forEach(([key, value]) => node.setAttribute(key, value));
+    document.head.appendChild(node);
+  }
+  return node;
+}
+
+function setMeta(selector, attrName, value, attrs) {
+  const node = ensureMeta(selector, attrs);
+  node.setAttribute(attrName, value);
+}
+
+function updateSocialMeta(work) {
+  const title = work.title + " " + work.titleEn + " · Synthetic Atelier";
+  const description = work.excerpt;
+  const imageUrl = new URL(work.cover.src, window.location.href).href;
+  const pageUrl = new URL("work.html?id=" + encodeURIComponent(work.id), window.location.href).href;
+  setMeta('meta[property="og:title"]', "content", title, { property: "og:title" });
+  setMeta('meta[property="og:description"]', "content", description, { property: "og:description" });
+  setMeta('meta[property="og:image"]', "content", imageUrl, { property: "og:image" });
+  setMeta('meta[property="og:url"]', "content", pageUrl, { property: "og:url" });
+  setMeta('meta[name="twitter:title"]', "content", title, { name: "twitter:title" });
+  setMeta('meta[name="twitter:description"]', "content", description, { name: "twitter:description" });
+  setMeta('meta[name="twitter:image"]', "content", imageUrl, { name: "twitter:image" });
 }
 async function initWorkDetailPage() {
   const host = document.querySelector("#workDetail");

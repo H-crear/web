@@ -16,8 +16,11 @@
     ],
     "featured": true,
     "cover": {
-      "src": "./assets/works/midnight-atlas/cover.png",
-      "alt": "午夜地图集 的 电影感夜景 主视觉封面，类型为 概念城市。"
+      "src": "./assets/works/midnight-atlas/cover.webp",
+      "alt": "午夜地图集 的 电影感夜景 主视觉封面，类型为 概念城市。",
+      "fallbackSrc": "./assets/works/midnight-atlas/cover.png",
+      "width": 1400,
+      "height": 900
     },
     "detailImages": [
       {
@@ -55,7 +58,7 @@
         "Manual art direction",
         "Raster cover art direction"
       ],
-      "format": "PNG raster cover + 2 SVG details",
+      "format": "WebP raster cover + PNG fallback + 2 SVG details",
       "aspectRatio": "16:10",
       "license": "Portfolio concept demo, do not resell as stock asset",
       "credits": "Synthetic Atelier / 合成景观档案"
@@ -64,7 +67,7 @@
     "medium": "概念城市",
     "mood": "神秘 / 冷光 / 档案感",
     "useCase": "城市概念提案、视觉小说、音乐现场视觉",
-    "coverType": "raster PNG"
+    "coverType": "raster WebP + PNG fallback"
   },
   {
     "id": "porcelain-clouds",
@@ -83,8 +86,11 @@
     ],
     "featured": true,
     "cover": {
-      "src": "./assets/works/porcelain-clouds/cover.png",
-      "alt": "瓷云档案 的 东方静物 主视觉封面，类型为 产品静物。"
+      "src": "./assets/works/porcelain-clouds/cover.webp",
+      "alt": "瓷云档案 的 东方静物 主视觉封面，类型为 产品静物。",
+      "fallbackSrc": "./assets/works/porcelain-clouds/cover.png",
+      "width": 1400,
+      "height": 900
     },
     "detailImages": [
       {
@@ -122,7 +128,7 @@
         "SVG art pass",
         "Raster cover art direction"
       ],
-      "format": "PNG raster cover + 2 SVG details",
+      "format": "WebP raster cover + PNG fallback + 2 SVG details",
       "aspectRatio": "4:3",
       "license": "Portfolio concept demo, do not resell as stock asset",
       "credits": "Synthetic Atelier / 合成景观档案"
@@ -131,7 +137,7 @@
     "medium": "产品静物",
     "mood": "轻盈 / 釉色 / 博物馆感",
     "useCase": "香氛包装、艺术出版、材质趋势板",
-    "coverType": "raster PNG"
+    "coverType": "raster WebP + PNG fallback"
   },
   {
     "id": "memory-reef",
@@ -149,8 +155,11 @@
     ],
     "featured": true,
     "cover": {
-      "src": "./assets/works/memory-reef/cover.png",
-      "alt": "记忆珊瑚 的 生态科幻 主视觉封面，类型为 幻想场景。"
+      "src": "./assets/works/memory-reef/cover.webp",
+      "alt": "记忆珊瑚 的 生态科幻 主视觉封面，类型为 幻想场景。",
+      "fallbackSrc": "./assets/works/memory-reef/cover.png",
+      "width": 1400,
+      "height": 900
     },
     "detailImages": [
       {
@@ -188,7 +197,7 @@
         "SVG mood study",
         "Raster cover art direction"
       ],
-      "format": "PNG raster cover + 2 SVG details",
+      "format": "WebP raster cover + PNG fallback + 2 SVG details",
       "aspectRatio": "16:9",
       "license": "Portfolio concept demo, do not resell as stock asset",
       "credits": "Synthetic Atelier / 合成景观档案"
@@ -197,7 +206,7 @@
     "medium": "幻想场景",
     "mood": "深海 / 发光 / 情绪叙事",
     "useCase": "沉浸展览、游戏场景、专辑视觉",
-    "coverType": "raster PNG"
+    "coverType": "raster WebP + PNG fallback"
   },
   {
     "id": "neon-herbarium",
@@ -216,8 +225,11 @@
     ],
     "featured": true,
     "cover": {
-      "src": "./assets/works/neon-herbarium/cover.png",
-      "alt": "霓虹植物志 的 霓虹图谱 主视觉封面，类型为 插画图鉴。"
+      "src": "./assets/works/neon-herbarium/cover.webp",
+      "alt": "霓虹植物志 的 霓虹图谱 主视觉封面，类型为 插画图鉴。",
+      "fallbackSrc": "./assets/works/neon-herbarium/cover.png",
+      "width": 1400,
+      "height": 900
     },
     "detailImages": [
       {
@@ -255,7 +267,7 @@
         "SVG illustration",
         "Raster cover art direction"
       ],
-      "format": "PNG raster cover + 2 SVG details",
+      "format": "WebP raster cover + PNG fallback + 2 SVG details",
       "aspectRatio": "3:2",
       "license": "Portfolio concept demo, do not resell as stock asset",
       "credits": "Synthetic Atelier / 合成景观档案"
@@ -264,7 +276,7 @@
     "medium": "插画图鉴",
     "mood": "潮湿 / 荧光 / 都市植物",
     "useCase": "活动海报、潮流空间、社媒栏目",
-    "coverType": "raster PNG"
+    "coverType": "raster WebP + PNG fallback"
   },
   {
     "id": "lunar-street-market",
@@ -281,8 +293,11 @@
     ],
     "featured": false,
     "cover": {
-      "src": "./assets/works/lunar-street-market/cover.png",
-      "alt": "月面夜市 的 生活科幻 主视觉封面，类型为 场景设计。"
+      "src": "./assets/works/lunar-street-market/cover.webp",
+      "alt": "月面夜市 的 生活科幻 主视觉封面，类型为 场景设计。",
+      "fallbackSrc": "./assets/works/lunar-street-market/cover.png",
+      "width": 1400,
+      "height": 900
     },
     "detailImages": [
       {
@@ -320,7 +335,7 @@
         "SVG key art",
         "Raster cover art direction"
       ],
-      "format": "PNG raster cover + 2 SVG details",
+      "format": "WebP raster cover + PNG fallback + 2 SVG details",
       "aspectRatio": "21:9",
       "license": "Portfolio concept demo, do not resell as stock asset",
       "credits": "Synthetic Atelier / 合成景观档案"
@@ -329,7 +344,7 @@
     "medium": "场景设计",
     "mood": "暖光 / 月面 / 烟火气",
     "useCase": "品牌联名、短片场景、游戏关卡",
-    "coverType": "raster PNG"
+    "coverType": "raster WebP + PNG fallback"
   },
   {
     "id": "glass-monsoon",
@@ -348,8 +363,11 @@
     ],
     "featured": false,
     "cover": {
-      "src": "./assets/works/glass-monsoon/cover.png",
-      "alt": "玻璃季风 的 建筑材质 主视觉封面，类型为 建筑视觉。"
+      "src": "./assets/works/glass-monsoon/cover.webp",
+      "alt": "玻璃季风 的 建筑材质 主视觉封面，类型为 建筑视觉。",
+      "fallbackSrc": "./assets/works/glass-monsoon/cover.png",
+      "width": 1400,
+      "height": 900
     },
     "detailImages": [
       {
@@ -387,7 +405,7 @@
         "SVG composition",
         "Raster cover art direction"
       ],
-      "format": "PNG raster cover + 2 SVG details",
+      "format": "WebP raster cover + PNG fallback + 2 SVG details",
       "aspectRatio": "5:4",
       "license": "Portfolio concept demo, do not resell as stock asset",
       "credits": "Synthetic Atelier / 合成景观档案"
@@ -396,7 +414,7 @@
     "medium": "建筑视觉",
     "mood": "雨季 / 透明 / 高级感",
     "useCase": "建筑品牌、城市更新、天气主题活动",
-    "coverType": "raster PNG"
+    "coverType": "raster WebP + PNG fallback"
   },
   {
     "id": "satellite-garden",
@@ -414,8 +432,11 @@
     ],
     "featured": false,
     "cover": {
-      "src": "./assets/works/satellite-garden/cover.png",
-      "alt": "卫星花园 的 可持续未来 主视觉封面，类型为 系统景观。"
+      "src": "./assets/works/satellite-garden/cover.webp",
+      "alt": "卫星花园 的 可持续未来 主视觉封面，类型为 系统景观。",
+      "fallbackSrc": "./assets/works/satellite-garden/cover.png",
+      "width": 1400,
+      "height": 900
     },
     "detailImages": [
       {
@@ -453,7 +474,7 @@
         "Art direction",
         "Raster cover art direction"
       ],
-      "format": "PNG raster cover + 2 SVG details",
+      "format": "WebP raster cover + PNG fallback + 2 SVG details",
       "aspectRatio": "16:10",
       "license": "Portfolio concept demo, do not resell as stock asset",
       "credits": "Synthetic Atelier / 合成景观档案"
@@ -462,7 +483,7 @@
     "medium": "系统景观",
     "mood": "轨道 / 植物 / 技术温室",
     "useCase": "科普展陈、未来农业、科技品牌",
-    "coverType": "raster PNG"
+    "coverType": "raster WebP + PNG fallback"
   },
   {
     "id": "desert-signal-library",
@@ -481,8 +502,11 @@
     ],
     "featured": false,
     "cover": {
-      "src": "./assets/works/desert-signal-library/cover.png",
-      "alt": "沙丘信号图书馆 的 荒漠档案 主视觉封面，类型为 概念建筑。"
+      "src": "./assets/works/desert-signal-library/cover.webp",
+      "alt": "沙丘信号图书馆 的 荒漠档案 主视觉封面，类型为 概念建筑。",
+      "fallbackSrc": "./assets/works/desert-signal-library/cover.png",
+      "width": 1400,
+      "height": 900
     },
     "detailImages": [
       {
@@ -520,7 +544,7 @@
         "SVG visual system",
         "Raster cover art direction"
       ],
-      "format": "PNG raster cover + 2 SVG details",
+      "format": "WebP raster cover + PNG fallback + 2 SVG details",
       "aspectRatio": "3:2",
       "license": "Portfolio concept demo, do not resell as stock asset",
       "credits": "Synthetic Atelier / 合成景观档案"
@@ -529,7 +553,7 @@
     "medium": "概念建筑",
     "mood": "沙金 / 信号 / 文明遗迹",
     "useCase": "文学播客、概念展览、文化空间",
-    "coverType": "raster PNG"
+    "coverType": "raster WebP + PNG fallback"
   },
   {
     "id": "synthetic-portrait-studio",
@@ -566,7 +590,7 @@
     "medium": "AI 人像",
     "mood": "克制 / 高级 / 人物叙事",
     "useCase": "个人品牌、角色设定、播客封面",
-    "coverType": "raster PNG",
+    "coverType": "raster WebP + PNG fallback",
     "palette": [
       "#151210",
       "#3b2a25",
@@ -575,8 +599,11 @@
       "#f25f5c"
     ],
     "cover": {
-      "src": "./assets/works/synthetic-portrait-studio/cover.png",
-      "alt": "合成人像工作室 的 编辑部肖像 主视觉封面，类型为 AI 人像。"
+      "src": "./assets/works/synthetic-portrait-studio/cover.webp",
+      "alt": "合成人像工作室 的 编辑部肖像 主视觉封面，类型为 AI 人像。",
+      "fallbackSrc": "./assets/works/synthetic-portrait-studio/cover.png",
+      "width": 1586,
+      "height": 992
     },
     "detailImages": [
       {
@@ -597,7 +624,7 @@
         "Raster cover render",
         "SVG detail system"
       ],
-      "format": "PNG raster cover + 2 SVG details",
+      "format": "WebP raster cover + PNG fallback + 2 SVG details",
       "aspectRatio": "14:9",
       "license": "Portfolio concept demo, do not resell as stock asset",
       "credits": "Synthetic Atelier / 合成景观档案"
@@ -638,7 +665,7 @@
     "medium": "产品视觉",
     "mood": "干净 / 高光 / 商业质感",
     "useCase": "产品概念、广告 KV、电商主图",
-    "coverType": "raster PNG",
+    "coverType": "raster WebP + PNG fallback",
     "palette": [
       "#0d1012",
       "#1c2a2f",
@@ -647,8 +674,11 @@
       "#ffb45c"
     ],
     "cover": {
-      "src": "./assets/works/hyperreal-product-lab/cover.png",
-      "alt": "超写实产品实验室 的 超写实广告 主视觉封面，类型为 产品视觉。"
+      "src": "./assets/works/hyperreal-product-lab/cover.webp",
+      "alt": "超写实产品实验室 的 超写实广告 主视觉封面，类型为 产品视觉。",
+      "fallbackSrc": "./assets/works/hyperreal-product-lab/cover.png",
+      "width": 1586,
+      "height": 992
     },
     "detailImages": [
       {
@@ -669,7 +699,7 @@
         "Raster cover render",
         "SVG detail system"
       ],
-      "format": "PNG raster cover + 2 SVG details",
+      "format": "WebP raster cover + PNG fallback + 2 SVG details",
       "aspectRatio": "14:9",
       "license": "Portfolio concept demo, do not resell as stock asset",
       "credits": "Synthetic Atelier / 合成景观档案"
@@ -710,7 +740,7 @@
     "medium": "建筑室内",
     "mood": "安静 / 自然光 / 材质秩序",
     "useCase": "空间提案、室内概念、展厅视觉",
-    "coverType": "raster PNG",
+    "coverType": "raster WebP + PNG fallback",
     "palette": [
       "#171614",
       "#3a3832",
@@ -719,8 +749,11 @@
       "#f0e7d8"
     ],
     "cover": {
-      "src": "./assets/works/quiet-architecture-interior/cover.png",
-      "alt": "静默建筑内景 的 极简建筑摄影 主视觉封面，类型为 建筑室内。"
+      "src": "./assets/works/quiet-architecture-interior/cover.webp",
+      "alt": "静默建筑内景 的 极简建筑摄影 主视觉封面，类型为 建筑室内。",
+      "fallbackSrc": "./assets/works/quiet-architecture-interior/cover.png",
+      "width": 1587,
+      "height": 991
     },
     "detailImages": [
       {
@@ -741,7 +774,7 @@
         "Raster cover render",
         "SVG detail system"
       ],
-      "format": "PNG raster cover + 2 SVG details",
+      "format": "WebP raster cover + PNG fallback + 2 SVG details",
       "aspectRatio": "14:9",
       "license": "Portfolio concept demo, do not resell as stock asset",
       "credits": "Synthetic Atelier / 合成景观档案"
@@ -782,7 +815,7 @@
     "medium": "抽象海报",
     "mood": "梦境 / 颗粒 / 叠印",
     "useCase": "音乐海报、艺术活动、实验出版",
-    "coverType": "raster PNG",
+    "coverType": "raster WebP + PNG fallback",
     "palette": [
       "#13110f",
       "#f0e1c2",
@@ -791,8 +824,11 @@
       "#80ff72"
     ],
     "cover": {
-      "src": "./assets/works/collage-dream-engine/cover.png",
-      "alt": "拼贴梦境引擎 的 实验拼贴 主视觉封面，类型为 抽象海报。"
+      "src": "./assets/works/collage-dream-engine/cover.webp",
+      "alt": "拼贴梦境引擎 的 实验拼贴 主视觉封面，类型为 抽象海报。",
+      "fallbackSrc": "./assets/works/collage-dream-engine/cover.png",
+      "width": 1586,
+      "height": 992
     },
     "detailImages": [
       {
@@ -813,7 +849,7 @@
         "Raster cover render",
         "SVG detail system"
       ],
-      "format": "PNG raster cover + 2 SVG details",
+      "format": "WebP raster cover + PNG fallback + 2 SVG details",
       "aspectRatio": "14:9",
       "license": "Portfolio concept demo, do not resell as stock asset",
       "credits": "Synthetic Atelier / 合成景观档案"

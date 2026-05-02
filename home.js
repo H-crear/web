@@ -2,11 +2,12 @@ function createWorkCard(work) {
   const D = window.SafeDOM;
   const tags = [work.medium, work.style, ...(work.tags || []).slice(0, 2)].filter(Boolean).map((tag) => D.el("span", { className: "tag", text: tag }));
   return D.el("article", { className: "work-card is-visible" }, [
-    D.el("a", { className: "work-thumb", href: "work.html?id=" + encodeURIComponent(work.id), "aria-label": "查看 " + work.title }, [D.el("img", { src: work.cover.src, alt: work.cover.alt })]),
+    D.el("a", { className: "work-thumb", href: "work.html?id=" + encodeURIComponent(work.id), "aria-label": "查看 " + work.title }, [D.image({ src: work.cover.src, fallbackSrc: work.cover.fallbackSrc, alt: work.cover.alt, width: work.cover.width, height: work.cover.height, loading: "lazy", decoding: "async" })]),
     D.el("div", { className: "work-card-body" }, [
       D.el("div", { className: "work-meta-line" }, [D.el("span", { text: work.category }), D.el("span", { text: work.coverType || work.year })]),
       D.el("h3", {}, [D.el("a", { href: "work.html?id=" + encodeURIComponent(work.id), text: work.title + " " + work.titleEn })]),
       D.el("p", { text: work.excerpt }),
+      D.el("p", { className: "use-case", text: "适合：" + work.useCase }),
       D.el("div", { className: "tag-row" }, tags)
     ])
   ]);

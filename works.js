@@ -1,13 +1,14 @@
 function normalize(value) { return String(value || "").trim().toLowerCase(); }
-function createWorkCard(work) {
+function createWorkCard(work, index) {
   const D = window.SafeDOM;
   const tags = [work.medium, work.style, ...(work.tags || []).slice(0, 3)].filter(Boolean).map((tag) => D.el("span", { className: "tag", text: tag }));
   return D.el("article", { className: "work-card is-visible" }, [
-    D.el("a", { className: "work-thumb", href: "work.html?id=" + encodeURIComponent(work.id), "aria-label": "查看 " + work.title }, [D.el("img", { src: work.cover.src, alt: work.cover.alt })]),
+    D.el("a", { className: "work-thumb", href: "work.html?id=" + encodeURIComponent(work.id), "aria-label": "查看 " + work.title }, [D.image({ src: work.cover.src, fallbackSrc: work.cover.fallbackSrc, alt: work.cover.alt, width: work.cover.width, height: work.cover.height, loading: index < 3 ? "eager" : "lazy", decoding: "async" })]),
     D.el("div", { className: "work-card-body" }, [
       D.el("div", { className: "work-meta-line" }, [D.el("span", { text: work.category }), D.el("span", { text: work.year })]),
       D.el("h2", {}, [D.el("a", { href: "work.html?id=" + encodeURIComponent(work.id), text: work.title + " " + work.titleEn })]),
       D.el("p", { text: work.excerpt }),
+      D.el("p", { className: "use-case", text: "适合：" + work.useCase }),
       D.el("div", { className: "work-facets" }, [D.el("span", { text: work.medium }), D.el("span", { text: work.style }), D.el("span", { text: work.mood })]),
       D.el("div", { className: "tag-row" }, tags)
     ])
@@ -42,7 +43,7 @@ function renderWorks(works, state) {
   if (filtered.length === 0) {
     grid.appendChild(D.el("div", { className: "empty-state" }, [D.el("h2", { text: "没有找到匹配作品" }), D.el("p", { text: "换一个关键词，或减少筛选条件试试。" })]));
   } else {
-    filtered.forEach((work) => grid.appendChild(createWorkCard(work)));
+    filtered.forEach((work, index) => grid.appendChild(createWorkCard(work, index)));
   }
   if (count) count.textContent = "显示 " + filtered.length + " / " + works.length + " 个项目";
 }
