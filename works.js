@@ -1,58 +1,31 @@
-function normalize(value) {
-  return String(value || "").trim().toLowerCase();
-}
-
+function normalize(value) { return String(value || "").trim().toLowerCase(); }
 function createWorkCard(work) {
   const D = window.SafeDOM;
-  const tags = (work.tags || []).map((tag) => D.el("span", { className: "tag", text: tag }));
+  const tags = [work.medium, work.style, ...(work.tags || []).slice(0, 3)].filter(Boolean).map((tag) => D.el("span", { className: "tag", text: tag }));
   return D.el("article", { className: "work-card is-visible" }, [
-    D.el("a", { className: "work-thumb", href: "work.html?id=" + encodeURIComponent(work.id), "aria-label": "查看 " + work.title }, [
-      D.el("img", { src: work.cover.src, alt: work.cover.alt })
-    ]),
+    D.el("a", { className: "work-thumb", href: "work.html?id=" + encodeURIComponent(work.id), "aria-label": "查看 " + work.title }, [D.el("img", { src: work.cover.src, alt: work.cover.alt })]),
     D.el("div", { className: "work-card-body" }, [
-      D.el("div", { className: "work-meta-line" }, [
-        D.el("span", { text: work.category }),
-        D.el("span", { text: work.year })
-      ]),
-      D.el("h2", {}, [
-        D.el("a", { href: "work.html?id=" + encodeURIComponent(work.id), text: work.title + " " + work.titleEn })
-      ]),
+      D.el("div", { className: "work-meta-line" }, [D.el("span", { text: work.category }), D.el("span", { text: work.year })]),
+      D.el("h2", {}, [D.el("a", { href: "work.html?id=" + encodeURIComponent(work.id), text: work.title + " " + work.titleEn })]),
       D.el("p", { text: work.excerpt }),
+      D.el("div", { className: "work-facets" }, [D.el("span", { text: work.medium }), D.el("span", { text: work.style }), D.el("span", { text: work.mood })]),
       D.el("div", { className: "tag-row" }, tags)
     ])
   ]);
 }
-
 function matchesSearch(work, query) {
   if (!query) return true;
-  const haystack = [
-    work.title,
-    work.titleEn,
-    work.category,
-    work.excerpt,
-    work.background,
-    work.promptApproach,
-    ...(work.tags || [])
-  ].map(normalize).join(" ");
-  return haystack.includes(query);
+  return [work.title, work.titleEn, work.category, work.excerpt, work.background, work.promptApproach, work.style, work.medium, work.mood, work.useCase, ...(work.tags || [])].map(normalize).join(" ").includes(query);
 }
-
-function renderFilters(categories, activeCategory, onChange) {
-  const host = document.querySelector("#categoryFilters");
+function renderFilterGroup(hostId, values, active, onChange) {
+  const host = document.querySelector(hostId);
   if (!host) return;
   window.SafeDOM.clear(host);
-  ["全部", ...categories].forEach((category) => {
-    const pressed = category === activeCategory;
-    host.appendChild(window.SafeDOM.el("button", {
-      type: "button",
-      className: "filter-chip" + (pressed ? " is-active" : ""),
-      "aria-pressed": String(pressed),
-      text: category,
-      onclick: () => onChange(category)
-    }));
+  ["全部", ...values].forEach((value) => {
+    const pressed = value === active;
+    host.appendChild(window.SafeDOM.el("button", { type: "button", className: "filter-chip" + (pressed ? " is-active" : ""), "aria-pressed": String(pressed), text: value, onclick: () => onChange(value) }));
   });
 }
-
 function renderWorks(works, state) {
   const D = window.SafeDOM;
   const grid = document.querySelector("#worksGrid");
@@ -60,42 +33,33 @@ function renderWorks(works, state) {
   if (!grid) return;
   const query = normalize(state.query);
   const filtered = works.filter((work) => {
-    const categoryMatch = state.category === "全部" || work.category === state.category;
-    return categoryMatch && matchesSearch(work, query);
+    return (state.category === "全部" || work.category === state.category)
+      && (state.medium === "全部" || work.medium === state.medium)
+      && (state.style === "全部" || work.style === state.style)
+      && matchesSearch(work, query);
   });
   D.clear(grid);
   if (filtered.length === 0) {
-    grid.appendChild(D.el("div", { className: "empty-state" }, [
-      D.el("h2", { text: "没有找到匹配作品" }),
-      D.el("p", { text: "换一个关键词或切回全部分类试试。" })
-    ]));
+    grid.appendChild(D.el("div", { className: "empty-state" }, [D.el("h2", { text: "没有找到匹配作品" }), D.el("p", { text: "换一个关键词，或减少筛选条件试试。" })]));
   } else {
     filtered.forEach((work) => grid.appendChild(createWorkCard(work)));
   }
-  if (count) {
-    count.textContent = "显示 " + filtered.length + " / " + works.length + " 个项目";
-  }
+  if (count) count.textContent = "显示 " + filtered.length + " / " + works.length + " 个项目";
 }
-
 async function initWorksPage() {
   const works = await getWorksData();
+  const state = { query: "", category: "全部", medium: "全部", style: "全部" };
   const categories = [...new Set(works.map((work) => work.category))];
-  const state = { query: "", category: "全部" };
-  const search = document.querySelector("#workSearch");
-  const sync = () => {
-    renderFilters(categories, state.category, (category) => {
-      state.category = category;
-      sync();
-    });
-    renderWorks(works, state);
+  const mediums = [...new Set(works.map((work) => work.medium))];
+  const styles = [...new Set(works.map((work) => work.style))];
+  const syncFilters = () => {
+    renderFilterGroup("#categoryFilters", categories, state.category, (value) => { state.category = value; syncFilters(); renderWorks(works, state); });
+    renderFilterGroup("#mediumFilters", mediums, state.medium, (value) => { state.medium = value; syncFilters(); renderWorks(works, state); });
+    renderFilterGroup("#styleFilters", styles, state.style, (value) => { state.style = value; syncFilters(); renderWorks(works, state); });
   };
-  if (search) {
-    search.addEventListener("input", () => {
-      state.query = search.value;
-      renderWorks(works, state);
-    });
-  }
-  sync();
+  const search = document.querySelector("#workSearch");
+  if (search) search.addEventListener("input", () => { state.query = search.value; renderWorks(works, state); });
+  syncFilters();
+  renderWorks(works, state);
 }
-
 document.addEventListener("DOMContentLoaded", initWorksPage);

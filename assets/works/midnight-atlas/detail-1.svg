@@ -1,46 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
   <title id="title">午夜地图集</title>
-  <desc id="desc">深蓝夜色中的抽象城市地图，街区像星座一样发光。</desc>
+  <desc id="desc">午夜地图集 的轻量详情图，展示 电影感夜景 风格线索。</desc>
   <defs>
-    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#08111f"/>
-      <stop offset="0.56" stop-color="#12213a"/>
-      <stop offset="1" stop-color="#f4b24a"/>
-    </linearGradient>
-    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
-      <path d="M48 0H0V48" fill="none" stroke="#d9e8ff" stroke-opacity=".12" stroke-width="1"/>
-    </pattern>
-    <filter id="soft">
-      <feGaussianBlur stdDeviation="16"/>
-    </filter>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#08111f"/><stop offset=".55" stop-color="#12213a"/><stop offset="1" stop-color="#f4b24a"/></linearGradient>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" fill="none" stroke="#d9e8ff" stroke-opacity=".11"/></pattern>
+    <filter id="blur"><feGaussianBlur stdDeviation="18"/></filter>
   </defs>
-  <rect width="1200" height="760" fill="url(#sky)"/>
-  <rect width="1200" height="760" fill="url(#grid)" opacity=".65"/>
-  <circle cx="199" cy="148" r="113" fill="#21d0b3" opacity=".16" filter="url(#soft)"/>
-  <circle cx="926" cy="198" r="138" fill="#d9e8ff" opacity=".14" filter="url(#soft)"/>
-  <path d="M0 150 C 160 70, 250 270, 420 160 S 720 80, 900 170 S 1090 270, 1200 190 V760 H0Z" fill="#12213a" opacity=".72"/>
-  <path d="M0 325 C 130 245, 280 360, 430 270 S 720 220, 860 300 S 1070 400, 1200 310 V760 H0Z" fill="#08111f" opacity=".78"/>
-  <g fill="none" stroke="#d9e8ff" stroke-width="3" stroke-linecap="round" opacity=".82">
-    <path d="M170 482 C280 381, 370 578, 510 430 S720 383, 840 490 S990 592, 1080 427"/>
-    <path d="M120 378 L320 308 L520 332 L710 278 L960 310"/>
-    <path d="M230 592 L410 530 L600 608 L790 510 L1010 554"/>
+  <rect width="1200" height="760" fill="url(#g)"/>
+  <rect width="1200" height="760" fill="url(#grid)"/>
+  <circle cx="183" cy="145" r="150" fill="#21d0b3" opacity=".14" filter="url(#blur)"/>
+  <circle cx="923" cy="170" r="170" fill="#d9e8ff" opacity=".12" filter="url(#blur)"/>
+  <path d="M0 231 C170 130, 310 350, 520 260 S820 144, 1200 290 V760 H0Z" fill="#12213a" opacity=".7"/>
+  <path d="M0 510 C220 428, 360 640, 570 510 S820 390, 1200 560 V760 H0Z" fill="#08111f" opacity=".78"/>
+  <g fill="none" stroke="#21d0b3" stroke-width="4" stroke-linecap="round" opacity=".85">
+    <path d="M100 510 C260 440, 340 600, 510 480 S760 360, 940 500 S1040 630, 1120 430"/>
+    <path d="M170 360 L340 295 L520 370 L730 270 L1010 346"/>
   </g>
-  <g fill="#21d0b3" stroke="#d9e8ff" stroke-opacity=".8" stroke-width="2">
-    <circle cx="170" cy="482" r="10"/>
-    <circle cx="320" cy="308" r="8"/>
-    <circle cx="510" cy="430" r="12"/>
-    <circle cx="710" cy="278" r="9"/>
-    <circle cx="840" cy="490" r="11"/>
-    <circle cx="1010" cy="554" r="8"/>
+  <g fill="#f4b24a" stroke="#d9e8ff" stroke-opacity=".7" stroke-width="2">
+    <circle cx="180" cy="360" r="10"/><circle cx="340" cy="295" r="8"/><circle cx="520" cy="370" r="12"/><circle cx="730" cy="270" r="9"/><circle cx="1010" cy="346" r="10"/>
   </g>
-  <g opacity=".9">
-    <rect x="76" y="74" width="320" height="88" rx="6" fill="#08111f" fill-opacity=".72" stroke="#d9e8ff" stroke-opacity=".22"/>
-    <text x="100" y="116" fill="#d9e8ff" font-family="Arial, sans-serif" font-size="22" letter-spacing="2">午夜地图集</text>
-    <text x="100" y="146" fill="#21d0b3" font-family="Arial, sans-serif" font-size="18">概念世界观</text>
-  </g>
-  <g font-family="Arial, sans-serif" font-size="14" fill="#d9e8ff" opacity=".78">
-    <text x="940" y="650">ARCHIVE 01</text>
-    <text x="940" y="678">2026 / 概念世界观</text>
-  </g>
+  <rect x="76" y="72" width="385" height="112" rx="8" fill="#08111f" fill-opacity=".72" stroke="#d9e8ff" stroke-opacity=".22"/>
+  <text x="104" y="118" fill="#d9e8ff" font-family="Arial, sans-serif" font-size="24">午夜地图集</text>
+  <text x="104" y="154" fill="#21d0b3" font-family="Arial, sans-serif" font-size="18">电影感夜景</text>
+  <text x="930" y="650" fill="#d9e8ff" opacity=".78" font-family="Arial, sans-serif" font-size="16">raster PNG / 概念城市</text>
 </svg>

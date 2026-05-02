@@ -1,46 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
   <title id="title">霓虹植物志</title>
-  <desc id="desc">霓虹色植物枝叶以标本图谱方式排列在深色背景上。</desc>
+  <desc id="desc">霓虹植物志 的轻量详情图，展示 霓虹图谱 风格线索。</desc>
   <defs>
-    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#101014"/>
-      <stop offset="0.56" stop-color="#10271f"/>
-      <stop offset="1" stop-color="#ff5ea8"/>
-    </linearGradient>
-    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
-      <path d="M48 0H0V48" fill="none" stroke="#7df5e8" stroke-opacity=".12" stroke-width="1"/>
-    </pattern>
-    <filter id="soft">
-      <feGaussianBlur stdDeviation="16"/>
-    </filter>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#101014"/><stop offset=".55" stop-color="#10271f"/><stop offset="1" stop-color="#ff5ea8"/></linearGradient>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" fill="none" stroke="#7df5e8" stroke-opacity=".11"/></pattern>
+    <filter id="blur"><feGaussianBlur stdDeviation="18"/></filter>
   </defs>
-  <rect width="1200" height="760" fill="url(#sky)"/>
-  <rect width="1200" height="760" fill="url(#grid)" opacity=".65"/>
-  <circle cx="256" cy="148" r="122" fill="#c8ff4a" opacity=".16" filter="url(#soft)"/>
-  <circle cx="884" cy="198" r="132" fill="#7df5e8" opacity=".14" filter="url(#soft)"/>
-  <path d="M0 186 C 160 106, 250 306, 420 196 S 720 116, 900 206 S 1090 306, 1200 226 V760 H0Z" fill="#10271f" opacity=".72"/>
-  <path d="M0 361 C 130 281, 280 396, 430 306 S 720 256, 860 336 S 1070 436, 1200 346 V760 H0Z" fill="#101014" opacity=".78"/>
-  <g fill="none" stroke="#7df5e8" stroke-width="3" stroke-linecap="round" opacity=".82">
-    <path d="M170 482 C280 354, 370 578, 510 430 S720 383, 840 460 S990 592, 1080 448"/>
-    <path d="M120 378 L320 332 L520 332 L710 278 L960 310"/>
-    <path d="M230 592 L410 530 L600 608 L790 510 L1010 536"/>
+  <rect width="1200" height="760" fill="url(#g)"/>
+  <rect width="1200" height="760" fill="url(#grid)"/>
+  <circle cx="321" cy="145" r="150" fill="#c8ff4a" opacity=".14" filter="url(#blur)"/>
+  <circle cx="821" cy="170" r="170" fill="#7df5e8" opacity=".12" filter="url(#blur)"/>
+  <path d="M0 297 C170 130, 310 350, 520 260 S820 228, 1200 290 V760 H0Z" fill="#10271f" opacity=".7"/>
+  <path d="M0 510 C220 476, 360 640, 570 510 S820 390, 1200 560 V760 H0Z" fill="#101014" opacity=".78"/>
+  <g fill="none" stroke="#c8ff4a" stroke-width="4" stroke-linecap="round" opacity=".85">
+    <path d="M100 510 C260 440, 340 600, 510 480 S760 360, 940 500 S1040 630, 1120 430"/>
+    <path d="M170 360 L340 265 L520 370 L730 270 L1010 382"/>
   </g>
-  <g fill="#c8ff4a" stroke="#7df5e8" stroke-opacity=".8" stroke-width="2">
-    <circle cx="170" cy="482" r="10"/>
-    <circle cx="320" cy="332" r="8"/>
-    <circle cx="510" cy="430" r="12"/>
-    <circle cx="710" cy="278" r="9"/>
-    <circle cx="840" cy="460" r="11"/>
-    <circle cx="1010" cy="536" r="8"/>
+  <g fill="#ff5ea8" stroke="#7df5e8" stroke-opacity=".7" stroke-width="2">
+    <circle cx="180" cy="360" r="10"/><circle cx="340" cy="265" r="8"/><circle cx="520" cy="370" r="12"/><circle cx="730" cy="270" r="9"/><circle cx="1010" cy="382" r="10"/>
   </g>
-  <g opacity=".9">
-    <rect x="76" y="74" width="320" height="88" rx="6" fill="#101014" fill-opacity=".72" stroke="#7df5e8" stroke-opacity=".22"/>
-    <text x="100" y="116" fill="#7df5e8" font-family="Arial, sans-serif" font-size="22" letter-spacing="2">霓虹植物志</text>
-    <text x="100" y="146" fill="#c8ff4a" font-family="Arial, sans-serif" font-size="18">作品档案馆</text>
-  </g>
-  <g font-family="Arial, sans-serif" font-size="14" fill="#7df5e8" opacity=".78">
-    <text x="940" y="650">ARCHIVE 04</text>
-    <text x="940" y="678">2025 / 作品档案馆</text>
-  </g>
+  <rect x="76" y="72" width="385" height="112" rx="8" fill="#101014" fill-opacity=".72" stroke="#7df5e8" stroke-opacity=".22"/>
+  <text x="104" y="118" fill="#7df5e8" font-family="Arial, sans-serif" font-size="24">霓虹植物志</text>
+  <text x="104" y="154" fill="#c8ff4a" font-family="Arial, sans-serif" font-size="18">霓虹图谱</text>
+  <text x="930" y="650" fill="#7df5e8" opacity=".78" font-family="Arial, sans-serif" font-size="16">raster PNG / 插画图鉴</text>
 </svg>

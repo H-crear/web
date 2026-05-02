@@ -10,12 +10,14 @@
       "城市夜行",
       "地图叙事",
       "电影感",
-      "档案"
+      "档案",
+      "概念城市",
+      "电影感夜景"
     ],
     "featured": true,
     "cover": {
-      "src": "./assets/works/midnight-atlas/cover.svg",
-      "alt": "深蓝夜色中的抽象城市地图，街区像星座一样发光。"
+      "src": "./assets/works/midnight-atlas/cover.png",
+      "alt": "午夜地图集 的 电影感夜景 主视觉封面，类型为 概念城市。"
     },
     "detailImages": [
       {
@@ -50,13 +52,19 @@
       "tools": [
         "Midjourney style prompt",
         "Vector cleanup",
-        "Manual art direction"
+        "Manual art direction",
+        "Raster cover art direction"
       ],
-      "format": "SVG cover + 2 SVG details",
+      "format": "PNG raster cover + 2 SVG details",
       "aspectRatio": "16:10",
       "license": "Portfolio concept demo, do not resell as stock asset",
       "credits": "Synthetic Atelier / 合成景观档案"
-    }
+    },
+    "style": "电影感夜景",
+    "medium": "概念城市",
+    "mood": "神秘 / 冷光 / 档案感",
+    "useCase": "城市概念提案、视觉小说、音乐现场视觉",
+    "coverType": "raster PNG"
   },
   {
     "id": "porcelain-clouds",
@@ -69,12 +77,14 @@
       "瓷器",
       "云层",
       "静物",
-      "材质"
+      "材质",
+      "产品静物",
+      "东方静物"
     ],
     "featured": true,
     "cover": {
-      "src": "./assets/works/porcelain-clouds/cover.svg",
-      "alt": "乳白和青色云朵漂浮在瓷器釉面般的抽象空间中。"
+      "src": "./assets/works/porcelain-clouds/cover.png",
+      "alt": "瓷云档案 的 东方静物 主视觉封面，类型为 产品静物。"
     },
     "detailImages": [
       {
@@ -109,13 +119,19 @@
       "tools": [
         "Image prompt design",
         "Palette system",
-        "SVG art pass"
+        "SVG art pass",
+        "Raster cover art direction"
       ],
-      "format": "SVG cover + 2 SVG details",
+      "format": "PNG raster cover + 2 SVG details",
       "aspectRatio": "4:3",
       "license": "Portfolio concept demo, do not resell as stock asset",
       "credits": "Synthetic Atelier / 合成景观档案"
-    }
+    },
+    "style": "东方静物",
+    "medium": "产品静物",
+    "mood": "轻盈 / 釉色 / 博物馆感",
+    "useCase": "香氛包装、艺术出版、材质趋势板",
+    "coverType": "raster PNG"
   },
   {
     "id": "memory-reef",
@@ -128,12 +144,13 @@
       "海底",
       "记忆",
       "生态科幻",
-      "情绪叙事"
+      "情绪叙事",
+      "幻想场景"
     ],
     "featured": true,
     "cover": {
-      "src": "./assets/works/memory-reef/cover.svg",
-      "alt": "深海中发光的珊瑚状结构包裹着半透明记忆碎片。"
+      "src": "./assets/works/memory-reef/cover.png",
+      "alt": "记忆珊瑚 的 生态科幻 主视觉封面，类型为 幻想场景。"
     },
     "detailImages": [
       {
@@ -168,13 +185,19 @@
       "tools": [
         "Worldbuilding prompt",
         "Compositional iteration",
-        "SVG mood study"
+        "SVG mood study",
+        "Raster cover art direction"
       ],
-      "format": "SVG cover + 2 SVG details",
+      "format": "PNG raster cover + 2 SVG details",
       "aspectRatio": "16:9",
       "license": "Portfolio concept demo, do not resell as stock asset",
       "credits": "Synthetic Atelier / 合成景观档案"
-    }
+    },
+    "style": "生态科幻",
+    "medium": "幻想场景",
+    "mood": "深海 / 发光 / 情绪叙事",
+    "useCase": "沉浸展览、游戏场景、专辑视觉",
+    "coverType": "raster PNG"
   },
   {
     "id": "neon-herbarium",
@@ -187,12 +210,14 @@
       "植物志",
       "霓虹",
       "城市标本",
-      "图谱"
+      "图谱",
+      "插画图鉴",
+      "霓虹图谱"
     ],
     "featured": true,
     "cover": {
-      "src": "./assets/works/neon-herbarium/cover.svg",
-      "alt": "霓虹色植物枝叶以标本图谱方式排列在深色背景上。"
+      "src": "./assets/works/neon-herbarium/cover.png",
+      "alt": "霓虹植物志 的 霓虹图谱 主视觉封面，类型为 插画图鉴。"
     },
     "detailImages": [
       {
@@ -227,13 +252,19 @@
       "tools": [
         "Prompt matrix",
         "Specimen layout",
-        "SVG illustration"
+        "SVG illustration",
+        "Raster cover art direction"
       ],
-      "format": "SVG cover + 2 SVG details",
+      "format": "PNG raster cover + 2 SVG details",
       "aspectRatio": "3:2",
       "license": "Portfolio concept demo, do not resell as stock asset",
       "credits": "Synthetic Atelier / 合成景观档案"
-    }
+    },
+    "style": "霓虹图谱",
+    "medium": "插画图鉴",
+    "mood": "潮湿 / 荧光 / 都市植物",
+    "useCase": "活动海报、潮流空间、社媒栏目",
+    "coverType": "raster PNG"
   },
   {
     "id": "lunar-street-market",
@@ -250,8 +281,8 @@
     ],
     "featured": false,
     "cover": {
-      "src": "./assets/works/lunar-street-market/cover.svg",
-      "alt": "月面基地旁的夜市摊位发出暖光，远处能看到地球弧光。"
+      "src": "./assets/works/lunar-street-market/cover.png",
+      "alt": "月面夜市 的 生活科幻 主视觉封面，类型为 场景设计。"
     },
     "detailImages": [
       {
@@ -286,13 +317,19 @@
       "tools": [
         "Scene prompt",
         "Mood references",
-        "SVG key art"
+        "SVG key art",
+        "Raster cover art direction"
       ],
-      "format": "SVG cover + 2 SVG details",
+      "format": "PNG raster cover + 2 SVG details",
       "aspectRatio": "21:9",
       "license": "Portfolio concept demo, do not resell as stock asset",
       "credits": "Synthetic Atelier / 合成景观档案"
-    }
+    },
+    "style": "生活科幻",
+    "medium": "场景设计",
+    "mood": "暖光 / 月面 / 烟火气",
+    "useCase": "品牌联名、短片场景、游戏关卡",
+    "coverType": "raster PNG"
   },
   {
     "id": "glass-monsoon",
@@ -305,12 +342,14 @@
       "季风",
       "玻璃",
       "天气系统",
-      "材质研究"
+      "材质研究",
+      "建筑视觉",
+      "建筑材质"
     ],
     "featured": false,
     "cover": {
-      "src": "./assets/works/glass-monsoon/cover.svg",
-      "alt": "雨季城市中玻璃幕墙折射出绿色、银色和橙色光线。"
+      "src": "./assets/works/glass-monsoon/cover.png",
+      "alt": "玻璃季风 的 建筑材质 主视觉封面，类型为 建筑视觉。"
     },
     "detailImages": [
       {
@@ -345,13 +384,19 @@
       "tools": [
         "Material prompt tests",
         "Palette constraints",
-        "SVG composition"
+        "SVG composition",
+        "Raster cover art direction"
       ],
-      "format": "SVG cover + 2 SVG details",
+      "format": "PNG raster cover + 2 SVG details",
       "aspectRatio": "5:4",
       "license": "Portfolio concept demo, do not resell as stock asset",
       "credits": "Synthetic Atelier / 合成景观档案"
-    }
+    },
+    "style": "建筑材质",
+    "medium": "建筑视觉",
+    "mood": "雨季 / 透明 / 高级感",
+    "useCase": "建筑品牌、城市更新、天气主题活动",
+    "coverType": "raster PNG"
   },
   {
     "id": "satellite-garden",
@@ -364,12 +409,13 @@
       "轨道农业",
       "卫星",
       "温室",
-      "系统景观"
+      "系统景观",
+      "可持续未来"
     ],
     "featured": false,
     "cover": {
-      "src": "./assets/works/satellite-garden/cover.svg",
-      "alt": "轨道卫星上漂浮着温室花园和圆形天线结构。"
+      "src": "./assets/works/satellite-garden/cover.png",
+      "alt": "卫星花园 的 可持续未来 主视觉封面，类型为 系统景观。"
     },
     "detailImages": [
       {
@@ -404,13 +450,19 @@
       "tools": [
         "System diagram prompt",
         "SVG diagramming",
-        "Art direction"
+        "Art direction",
+        "Raster cover art direction"
       ],
-      "format": "SVG cover + 2 SVG details",
+      "format": "PNG raster cover + 2 SVG details",
       "aspectRatio": "16:10",
       "license": "Portfolio concept demo, do not resell as stock asset",
       "credits": "Synthetic Atelier / 合成景观档案"
-    }
+    },
+    "style": "可持续未来",
+    "medium": "系统景观",
+    "mood": "轨道 / 植物 / 技术温室",
+    "useCase": "科普展陈、未来农业、科技品牌",
+    "coverType": "raster PNG"
   },
   {
     "id": "desert-signal-library",
@@ -423,12 +475,14 @@
       "沙漠",
       "信号",
       "图书馆",
-      "文明遗迹"
+      "文明遗迹",
+      "概念建筑",
+      "荒漠档案"
     ],
     "featured": false,
     "cover": {
-      "src": "./assets/works/desert-signal-library/cover.svg",
-      "alt": "橙色沙丘中的黑色图书馆塔发出绿色无线电信号。"
+      "src": "./assets/works/desert-signal-library/cover.png",
+      "alt": "沙丘信号图书馆 的 荒漠档案 主视觉封面，类型为 概念建筑。"
     },
     "detailImages": [
       {
@@ -463,10 +517,304 @@
       "tools": [
         "Narrative prompt",
         "Archive layout",
-        "SVG visual system"
+        "SVG visual system",
+        "Raster cover art direction"
       ],
-      "format": "SVG cover + 2 SVG details",
+      "format": "PNG raster cover + 2 SVG details",
       "aspectRatio": "3:2",
+      "license": "Portfolio concept demo, do not resell as stock asset",
+      "credits": "Synthetic Atelier / 合成景观档案"
+    },
+    "style": "荒漠档案",
+    "medium": "概念建筑",
+    "mood": "沙金 / 信号 / 文明遗迹",
+    "useCase": "文学播客、概念展览、文化空间",
+    "coverType": "raster PNG"
+  },
+  {
+    "id": "synthetic-portrait-studio",
+    "title": "合成人像工作室",
+    "titleEn": "Synthetic Portrait Studio",
+    "year": "2026",
+    "category": "AI 视觉创作",
+    "excerpt": "一组面向个人品牌与虚构角色设定的 AI 人像实验，强调人物气质、服装语言和背景叙事的统一。",
+    "tags": [
+      "人像",
+      "角色设定",
+      "时尚",
+      "个人品牌"
+    ],
+    "featured": true,
+    "background": "项目模拟为艺术家、播客主持人和虚构角色建立一套可延展肖像系统，而不是生成单张头像。",
+    "promptApproach": "提示词围绕 editorial portrait、soft key light、couture texture、character biography 展开，用背景物件提示身份。",
+    "iterations": [
+      {
+        "title": "确定人物气质",
+        "text": "先测试冷静、锋利、亲和三种面部气质，选出最适合个人品牌的方向。"
+      },
+      {
+        "title": "统一服装和背景",
+        "text": "第二轮把服装材质、配饰和背景器物做成同一套身份线索。"
+      },
+      {
+        "title": "收束为肖像系统",
+        "text": "最后统一光线和构图，使单张图能扩展为系列封面和人物介绍页。"
+      }
+    ],
+    "result": "适合个人主页头像、播客封面、角色卡、品牌主理人视觉提案。",
+    "style": "编辑部肖像",
+    "medium": "AI 人像",
+    "mood": "克制 / 高级 / 人物叙事",
+    "useCase": "个人品牌、角色设定、播客封面",
+    "coverType": "raster PNG",
+    "palette": [
+      "#151210",
+      "#3b2a25",
+      "#f0d5b4",
+      "#7fd8c2",
+      "#f25f5c"
+    ],
+    "cover": {
+      "src": "./assets/works/synthetic-portrait-studio/cover.png",
+      "alt": "合成人像工作室 的 编辑部肖像 主视觉封面，类型为 AI 人像。"
+    },
+    "detailImages": [
+      {
+        "src": "./assets/works/synthetic-portrait-studio/detail-1.svg",
+        "alt": "合成人像工作室 的风格板详情图。",
+        "caption": "提炼 编辑部肖像 的构图、材质和情绪关键词。"
+      },
+      {
+        "src": "./assets/works/synthetic-portrait-studio/detail-2.svg",
+        "alt": "合成人像工作室 的应用场景详情图。",
+        "caption": "展示该方向如何延展到 个人品牌、角色设定、播客封面。"
+      }
+    ],
+    "meta": {
+      "tools": [
+        "Image direction",
+        "Prompt matrix",
+        "Raster cover render",
+        "SVG detail system"
+      ],
+      "format": "PNG raster cover + 2 SVG details",
+      "aspectRatio": "14:9",
+      "license": "Portfolio concept demo, do not resell as stock asset",
+      "credits": "Synthetic Atelier / 合成景观档案"
+    }
+  },
+  {
+    "id": "hyperreal-product-lab",
+    "title": "超写实产品实验室",
+    "titleEn": "Hyperreal Product Lab",
+    "year": "2026",
+    "category": "AI 视觉创作",
+    "excerpt": "围绕香氛、耳机和未来饮品的商业广告视觉实验，展示 AI 生成在产品概念阶段的速度与质感。",
+    "tags": [
+      "产品广告",
+      "超写实",
+      "商业视觉",
+      "包装"
+    ],
+    "featured": true,
+    "background": "项目用于验证新品在上市前的视觉方向：材质、背景、卖点和货架记忆点能否快速成立。",
+    "promptApproach": "从 hyperreal studio lighting、macro material、floating product、premium campaign key visual 组合，控制高光和包装轮廓。",
+    "iterations": [
+      {
+        "title": "确定产品轮廓",
+        "text": "先测试瓶型、盒型和佩戴设备三种品类，筛选最有广告感的几何外形。"
+      },
+      {
+        "title": "增强材质可信度",
+        "text": "第二轮放大玻璃、金属、雾面塑料和液体边缘，避免廉价 3D 感。"
+      },
+      {
+        "title": "加入传播结构",
+        "text": "最后把主视觉留白、标题位置和电商裁切比例一起考虑。"
+      }
+    ],
+    "result": "适合新品概念提案、电商主图方向、社媒广告和包装视觉预演。",
+    "style": "超写实广告",
+    "medium": "产品视觉",
+    "mood": "干净 / 高光 / 商业质感",
+    "useCase": "产品概念、广告 KV、电商主图",
+    "coverType": "raster PNG",
+    "palette": [
+      "#0d1012",
+      "#1c2a2f",
+      "#e8f1ef",
+      "#9ddad4",
+      "#ffb45c"
+    ],
+    "cover": {
+      "src": "./assets/works/hyperreal-product-lab/cover.png",
+      "alt": "超写实产品实验室 的 超写实广告 主视觉封面，类型为 产品视觉。"
+    },
+    "detailImages": [
+      {
+        "src": "./assets/works/hyperreal-product-lab/detail-1.svg",
+        "alt": "超写实产品实验室 的风格板详情图。",
+        "caption": "提炼 超写实广告 的构图、材质和情绪关键词。"
+      },
+      {
+        "src": "./assets/works/hyperreal-product-lab/detail-2.svg",
+        "alt": "超写实产品实验室 的应用场景详情图。",
+        "caption": "展示该方向如何延展到 产品概念、广告 KV、电商主图。"
+      }
+    ],
+    "meta": {
+      "tools": [
+        "Image direction",
+        "Prompt matrix",
+        "Raster cover render",
+        "SVG detail system"
+      ],
+      "format": "PNG raster cover + 2 SVG details",
+      "aspectRatio": "14:9",
+      "license": "Portfolio concept demo, do not resell as stock asset",
+      "credits": "Synthetic Atelier / 合成景观档案"
+    }
+  },
+  {
+    "id": "quiet-architecture-interior",
+    "title": "静默建筑内景",
+    "titleEn": "Quiet Architecture Interior",
+    "year": "2025",
+    "category": "作品档案馆",
+    "excerpt": "以画廊、阅读室和未来民宿为灵感，探索 AI 建筑室内图像如何表达光、材料和空间节奏。",
+    "tags": [
+      "建筑",
+      "室内",
+      "空间",
+      "光影"
+    ],
+    "featured": false,
+    "background": "项目面向空间提案早期阶段，用低成本图像快速判断空间调性、材料搭配和动线情绪。",
+    "promptApproach": "关键词以 quiet luxury interior、gallery daylight、microcement wall、warm timber detail 为核心，避免过度装饰。",
+    "iterations": [
+      {
+        "title": "限定空间用途",
+        "text": "先分别生成画廊、阅读室和短住空间，观察哪种场景更能承载品牌气质。"
+      },
+      {
+        "title": "校准材料比例",
+        "text": "第二轮控制木、石、织物和金属的占比，避免空间过冷或过满。"
+      },
+      {
+        "title": "整理镜头路径",
+        "text": "最后把入口、停留区和局部细节组织成可讲解的空间故事。"
+      }
+    ],
+    "result": "适合空间品牌提案、展厅方向、室内 moodboard 和建筑视觉预研。",
+    "style": "极简建筑摄影",
+    "medium": "建筑室内",
+    "mood": "安静 / 自然光 / 材质秩序",
+    "useCase": "空间提案、室内概念、展厅视觉",
+    "coverType": "raster PNG",
+    "palette": [
+      "#171614",
+      "#3a3832",
+      "#d6c8ae",
+      "#8da39a",
+      "#f0e7d8"
+    ],
+    "cover": {
+      "src": "./assets/works/quiet-architecture-interior/cover.png",
+      "alt": "静默建筑内景 的 极简建筑摄影 主视觉封面，类型为 建筑室内。"
+    },
+    "detailImages": [
+      {
+        "src": "./assets/works/quiet-architecture-interior/detail-1.svg",
+        "alt": "静默建筑内景 的风格板详情图。",
+        "caption": "提炼 极简建筑摄影 的构图、材质和情绪关键词。"
+      },
+      {
+        "src": "./assets/works/quiet-architecture-interior/detail-2.svg",
+        "alt": "静默建筑内景 的应用场景详情图。",
+        "caption": "展示该方向如何延展到 空间提案、室内概念、展厅视觉。"
+      }
+    ],
+    "meta": {
+      "tools": [
+        "Image direction",
+        "Prompt matrix",
+        "Raster cover render",
+        "SVG detail system"
+      ],
+      "format": "PNG raster cover + 2 SVG details",
+      "aspectRatio": "14:9",
+      "license": "Portfolio concept demo, do not resell as stock asset",
+      "credits": "Synthetic Atelier / 合成景观档案"
+    }
+  },
+  {
+    "id": "collage-dream-engine",
+    "title": "拼贴梦境引擎",
+    "titleEn": "Collage Dream Engine",
+    "year": "2025",
+    "category": "创作流程展示",
+    "excerpt": "一套混合纸张、扫描纹理、3D 碎片和抽象符号的拼贴实验，展示非写实方向的生成潜力。",
+    "tags": [
+      "拼贴",
+      "抽象",
+      "实验视觉",
+      "海报"
+    ],
+    "featured": false,
+    "background": "项目用于探索 AI 在非写实、非摄影任务中的价值：它可以生成视觉碎片，也可以组织出新的版式张力。",
+    "promptApproach": "以 surreal collage、scanned paper texture、constructivist poster、dream logic symbols 组织提示词，并保留随机边缘。",
+    "iterations": [
+      {
+        "title": "收集视觉碎片",
+        "text": "先生成纸张、符号、几何物和扫描噪点，建立可拼贴的素材池。"
+      },
+      {
+        "title": "建立版式方向",
+        "text": "第二轮用构成主义网格压住随机感，让画面像可发布海报而不是素材堆。"
+      },
+      {
+        "title": "保留实验气质",
+        "text": "最后只清理影响阅读的噪点，保留错位、叠印和纸张边缘。"
+      }
+    ],
+    "result": "适合独立音乐海报、实验出版、艺术活动视觉和创意过程展示。",
+    "style": "实验拼贴",
+    "medium": "抽象海报",
+    "mood": "梦境 / 颗粒 / 叠印",
+    "useCase": "音乐海报、艺术活动、实验出版",
+    "coverType": "raster PNG",
+    "palette": [
+      "#13110f",
+      "#f0e1c2",
+      "#e4572e",
+      "#2f80ed",
+      "#80ff72"
+    ],
+    "cover": {
+      "src": "./assets/works/collage-dream-engine/cover.png",
+      "alt": "拼贴梦境引擎 的 实验拼贴 主视觉封面，类型为 抽象海报。"
+    },
+    "detailImages": [
+      {
+        "src": "./assets/works/collage-dream-engine/detail-1.svg",
+        "alt": "拼贴梦境引擎 的风格板详情图。",
+        "caption": "提炼 实验拼贴 的构图、材质和情绪关键词。"
+      },
+      {
+        "src": "./assets/works/collage-dream-engine/detail-2.svg",
+        "alt": "拼贴梦境引擎 的应用场景详情图。",
+        "caption": "展示该方向如何延展到 音乐海报、艺术活动、实验出版。"
+      }
+    ],
+    "meta": {
+      "tools": [
+        "Image direction",
+        "Prompt matrix",
+        "Raster cover render",
+        "SVG detail system"
+      ],
+      "format": "PNG raster cover + 2 SVG details",
+      "aspectRatio": "14:9",
       "license": "Portfolio concept demo, do not resell as stock asset",
       "credits": "Synthetic Atelier / 合成景观档案"
     }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Synthetic Atelier / 合成景观档案</title>
-    <meta name="description" content="个人 AI 生成创作作品集，展示概念世界观、AI 视觉创作、作品档案和创作流程。">
+    <meta name="description" content="多风格 AI 图片作品集，覆盖概念城市、产品广告、AI 人像、建筑室内和实验拼贴。">
     <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
@@ -12,93 +12,45 @@
     <div class="site-shell">
       <header class="topbar" id="topbar">
         <div class="topbar-inner">
-          <a class="brand" href="index.html" aria-label="Synthetic Atelier 首页">
-            <span class="brand-mark" aria-hidden="true"></span>
-            <span><strong>Synthetic Atelier</strong><small>合成景观档案</small></span>
-          </a>
-          <button class="menu-toggle" id="menuToggle" aria-label="展开菜单" aria-expanded="false" aria-controls="nav">
-            <span></span><span></span><span></span>
-          </button>
+          <a class="brand" href="index.html" aria-label="Synthetic Atelier 首页"><span class="brand-mark" aria-hidden="true"></span><span><strong>Synthetic Atelier</strong><small>合成景观档案</small></span></a>
+          <button class="menu-toggle" id="menuToggle" aria-label="展开菜单" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
           <nav class="nav" id="nav" aria-label="主导航">
             <a href="index.html" aria-current="page" class="is-active">首页</a>
-              <a href="works.html">作品</a>
-              <a href="collaboration.html">方法论</a>
-              <a href="about.html">关于</a>
-              <a href="contact.html">合作</a>
+            <a href="works.html">作品</a>
+            <a href="collaboration.html">方法论</a>
+            <a href="about.html">关于</a>
+            <a href="contact.html">合作</a>
           </nav>
         </div>
       </header>
-
       <main id="main">
         <section class="hero home-hero">
           <div class="container hero-copy">
-            <p class="eyebrow">AI Visual Portfolio / Concept World Archive</p>
+            <p class="eyebrow">AI Image Portfolio / Multi-style Visual Archive</p>
             <h1>Synthetic Atelier<br><span>合成景观档案</span></h1>
-            <p class="hero-tagline">我把 AI 生成从随机图像整理成可被理解、复用和交付的视觉档案：先建立世界观，再设计提示词，最后把迭代过程变成作品的一部分。</p>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="works.html">查看作品</a>
-              <a class="btn" href="collaboration.html">创作方法</a>
-            </div>
+            <p class="hero-tagline">一个覆盖概念城市、产品广告、AI 人像、建筑室内、幻想场景和实验拼贴的 AI 图片作品集。每张图都被整理成可检索、可讲述、可交付的视觉项目。</p>
+            <div class="hero-actions"><a class="btn btn-primary" href="works.html">查看 12 组作品</a><a class="btn" href="#styleSpectrum">浏览风格光谱</a></div>
           </div>
         </section>
-
         <section class="section intro-band" aria-label="站点定位">
-          <div class="container intro-grid">
-            <div>
-              <p class="eyebrow">Positioning</p>
-              <h2>个人 AI 生成创作作品集，也是一座可接项目的视觉档案馆。</h2>
-            </div>
-            <p>站点第一版聚焦 8 个高完成度概念项目，覆盖 AI 视觉创作、概念世界观、作品档案馆和创作流程展示。每个项目都保留背景、提示词思路、迭代路径与交付说明。</p>
-          </div>
+          <div class="container intro-grid"><div><p class="eyebrow">Positioning</p><h2>AI 图片作品集，也是一座可接项目的视觉样本库。</h2></div><p>这版作品集扩展为 12 组精选项目：既有电影感概念图，也有商业产品、编辑部人像、建筑室内和抽象拼贴。每组都记录风格、媒介、情绪、应用场景和生成思路。</p></div>
         </section>
-
-        <section class="section">
+        <section class="section" id="styleSpectrum">
           <div class="container">
-            <div class="section-header">
-              <div>
-                <p class="eyebrow">Selected Works</p>
-                <h2>精选作品</h2>
-              </div>
-              <a class="text-link" href="works.html">进入作品档案</a>
+            <div class="section-header"><div><p class="eyebrow">Style Spectrum</p><h2>风格光谱</h2></div><a class="text-link" href="works.html">按类型筛选</a></div>
+            <div class="spectrum-grid">
+              <article class="spectrum-card"><span>01</span><h3>概念与世界观</h3><p>城市、月面、荒漠、轨道花园等场景方向。</p></article>
+              <article class="spectrum-card"><span>02</span><h3>商业与产品</h3><p>静物、广告 KV、包装和电商图方向。</p></article>
+              <article class="spectrum-card"><span>03</span><h3>人物与空间</h3><p>AI 肖像、建筑室内、品牌主页视觉。</p></article>
+              <article class="spectrum-card"><span>04</span><h3>实验与图像语言</h3><p>霓虹图谱、抽象拼贴、材质与版式实验。</p></article>
             </div>
-            <div id="featuredWorks" class="work-grid featured-grid"></div>
           </div>
         </section>
-
-        <section class="section method-preview">
-          <div class="container method-layout">
-            <div>
-              <p class="eyebrow">Methodology</p>
-              <h2>从提示词到作品档案，不把 AI 当成一次性灵感抽卡。</h2>
-              <p class="muted">我会先定义世界观规则和视觉约束，再生成、筛选、局部迭代，最终整理成可展示、可维护、可替换资产的项目页面。</p>
-              <a class="btn" href="collaboration.html">查看完整流程</a>
-            </div>
-            <ol class="process-list">
-              <li><span>01</span><strong>Brief</strong><p>确认主题、受众、禁区和交付格式。</p></li>
-              <li><span>02</span><strong>Prompt</strong><p>把材质、镜头、版式和情绪拆成可比较的提示词矩阵。</p></li>
-              <li><span>03</span><strong>Iteration</strong><p>记录失败样本、局部修正和系列统一标准。</p></li>
-              <li><span>04</span><strong>Archive</strong><p>输出封面、详情图、alt 文本、版权和维护说明。</p></li>
-            </ol>
-          </div>
-        </section>
-
-        <section class="section">
-          <div class="container cta-panel">
-            <p class="eyebrow">Commission</p>
-            <h2>适合需要“概念明确、视觉独特、能讲清流程”的 AI 视觉项目。</h2>
-            <a class="btn btn-primary" href="contact.html">聊一个合作方向</a>
-          </div>
-        </section>
+        <section class="section"><div class="container"><div class="section-header"><div><p class="eyebrow">Selected Works</p><h2>精选作品</h2></div><a class="text-link" href="works.html">进入作品档案</a></div><div id="featuredWorks" class="work-grid featured-grid"></div></div></section>
+        <section class="section method-preview"><div class="container method-layout"><div><p class="eyebrow">Methodology</p><h2>从风格样本到可交付图片，不把 AI 当作随机抽卡。</h2><p class="muted">我会先定义类型、情绪、镜头、材质和使用场景，再把图片整理成可筛选作品集。</p><a class="btn" href="collaboration.html">查看完整流程</a></div><ol class="process-list"><li><span>01</span><strong>Type</strong><p>先确定图片类型：人像、产品、建筑、概念或抽象。</p></li><li><span>02</span><strong>Style</strong><p>再收束风格、色彩和媒介感，保证系列不是散图。</p></li><li><span>03</span><strong>Image</strong><p>生成或渲染主视觉，并补充详情图解释方向。</p></li><li><span>04</span><strong>Archive</strong><p>归档为 JSON 数据、图片资产和可访问页面。</p></li></ol></div></section>
       </main>
-
-      <footer class="footer">
-        <div class="container footer-inner">
-          <p>© <span class="current-year"></span> Synthetic Atelier / 合成景观档案</p>
-          <p>AI visual portfolio · HTML / CSS / JS / JSON</p>
-        </div>
-      </footer>
+      <footer class="footer"><div class="container footer-inner"><p>© <span class="current-year"></span> Synthetic Atelier / 合成景观档案</p><p>AI image portfolio · HTML / CSS / JS / JSON</p></div></footer>
     </div>
-
     <script src="./safe-dom.js"></script>
     <script src="./data-loader.js"></script>
     <script src="./script.js"></script>

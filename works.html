@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>作品总览 · Synthetic Atelier</title>
-    <meta name="description" content="Synthetic Atelier 的 AI 生成作品总览，支持搜索、分类筛选和结果计数。">
+    <meta name="description" content="12 组 AI 图片项目总览，支持搜索、分类、类型和风格筛选。">
     <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
@@ -12,55 +12,23 @@
     <div class="site-shell">
       <header class="topbar" id="topbar">
         <div class="topbar-inner">
-          <a class="brand" href="index.html" aria-label="Synthetic Atelier 首页">
-            <span class="brand-mark" aria-hidden="true"></span>
-            <span><strong>Synthetic Atelier</strong><small>合成景观档案</small></span>
-          </a>
-          <button class="menu-toggle" id="menuToggle" aria-label="展开菜单" aria-expanded="false" aria-controls="nav">
-            <span></span><span></span><span></span>
-          </button>
+          <a class="brand" href="index.html" aria-label="Synthetic Atelier 首页"><span class="brand-mark" aria-hidden="true"></span><span><strong>Synthetic Atelier</strong><small>合成景观档案</small></span></a>
+          <button class="menu-toggle" id="menuToggle" aria-label="展开菜单" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
           <nav class="nav" id="nav" aria-label="主导航">
             <a href="index.html">首页</a>
-              <a href="works.html" aria-current="page" class="is-active">作品</a>
-              <a href="collaboration.html">方法论</a>
-              <a href="about.html">关于</a>
-              <a href="contact.html">合作</a>
+            <a href="works.html" aria-current="page" class="is-active">作品</a>
+            <a href="collaboration.html">方法论</a>
+            <a href="about.html">关于</a>
+            <a href="contact.html">合作</a>
           </nav>
         </div>
       </header>
-
       <main id="main">
-        <section class="page-hero">
-          <div class="container narrow">
-            <p class="eyebrow">Archive Index</p>
-            <h1>作品总览</h1>
-            <p>8 个 AI 生成项目被整理成可检索档案。你可以按关键词、标题、标签或类别筛选，快速进入每个项目的生成思路与迭代记录。</p>
-          </div>
-        </section>
-
-        <section class="section archive-section">
-          <div class="container">
-            <div class="works-tools" aria-label="作品筛选">
-              <label class="search-field">
-                <span>搜索</span>
-                <input id="workSearch" type="search" placeholder="试试：海底、霓虹、世界观、SVG" autocomplete="off">
-              </label>
-              <div id="categoryFilters" class="filter-bar" aria-label="分类筛选"></div>
-              <p id="resultCount" class="result-count" aria-live="polite"></p>
-            </div>
-            <div id="worksGrid" class="work-grid"></div>
-          </div>
-        </section>
+        <section class="page-hero"><div class="container narrow"><p class="eyebrow">Archive Index</p><h1>作品总览</h1><p>12 组 AI 图片项目覆盖多种类型和风格。你可以按关键词、分类、图片类型或风格筛选，快速找到适合提案、展示或商业转化的视觉方向。</p></div></section>
+        <section class="section archive-section"><div class="container"><div class="works-tools" aria-label="作品筛选"><label class="search-field"><span>搜索</span><input id="workSearch" type="search" placeholder="试试：人像、产品、建筑、拼贴、科幻" autocomplete="off"></label><div class="filter-group"><span class="filter-label">分类</span><div id="categoryFilters" class="filter-bar" aria-label="分类筛选"></div></div><div class="filter-group"><span class="filter-label">类型</span><div id="mediumFilters" class="filter-bar" aria-label="类型筛选"></div></div><div class="filter-group"><span class="filter-label">风格</span><div id="styleFilters" class="filter-bar" aria-label="风格筛选"></div></div><p id="resultCount" class="result-count" aria-live="polite"></p></div><div id="worksGrid" class="work-grid"></div></div></section>
       </main>
-
-      <footer class="footer">
-        <div class="container footer-inner">
-          <p>© <span class="current-year"></span> Synthetic Atelier / 合成景观档案</p>
-          <p>AI visual portfolio · HTML / CSS / JS / JSON</p>
-        </div>
-      </footer>
+      <footer class="footer"><div class="container footer-inner"><p>© <span class="current-year"></span> Synthetic Atelier / 合成景观档案</p><p>AI image portfolio · HTML / CSS / JS / JSON</p></div></footer>
     </div>
-
     <script src="./safe-dom.js"></script>
     <script src="./data-loader.js"></script>
     <script src="./script.js"></script>
