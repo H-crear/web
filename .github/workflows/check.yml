@@ -1,0 +1,84 @@
+name: 自动化检查
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  html-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 设置 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: 安装依赖
+        run: npm ci
+
+      - name: 运行测试脚本
+        run: npm test
+
+      - name: HTML 基本检查
+        run: |
+          echo "检查 HTML 文件..."
+          for file in *.html; do
+            if [ -f "$file" ]; then
+              # 检查是否有 DOCTYPE
+              if ! head -1 "$file" | grep -qi "<!doctype html>"; then
+                echo "❌ $file 缺少 DOCTYPE"
+                exit 1
+              fi
+              # 检查是否有 html 标签
+              if ! grep -qi "<html"; then
+                echo "❌ $file 缺少 <html> 标签"
+                exit 1
+              fi
+              echo "✅ $file 通过基本检查"
+            fi
+          done
+
+  link-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 检查内部链接
+        run: |
+          echo "检查内部链接完整性..."
+          # 检查 href 指向的文件是否存在
+          for href in $(grep -roh 'href="[^"]*"' *.html 2>/dev/null | sed 's/href="//g; s/"//g' | grep -E '^\./' | sort -u); do
+            if [ ! -f "${href#./}" ] && [ ! -d "${href#./}" ]; then
+              echo "⚠️  链接指向不存在的文件: $href"
+            fi
+          done
+          echo "✅ 内部链接检查完成"
+
+  image-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 检查图片引用
+        run: |
+          echo "检查图片资源引用..."
+          # 统计引用的图片数量
+          IMG_COUNT=$(grep -roh 'src="[^"]*\.\(png\|jpg\|jpeg\|gif\|svg\|webp\)"' *.html 2>/dev/null | wc -l)
+          echo "📷 HTML 中引用了 $IMG_COUNT 个图片"
+
+          # 检查 assets 目录
+          if [ -d "assets" ]; then
+            ASSET_COUNT=$(find assets -type f \( -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" -o -name "*.gif" -o -name "*.svg" -o -name "*.webp" \) 2>/dev/null | wc -l)
+            echo "📁 assets 目录包含 $ASSET_COUNT 个图片文件"
+          fi
